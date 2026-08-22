@@ -46,7 +46,7 @@ export default function Home() {
             <span>Based in New York</span>
             <span>Working everywhere</span>
           </div>
-          <strong>STUDIO 1801</strong>
+          <strong>Studio 1801</strong>
         </footer>
 
         <section className="reference-right">
@@ -74,7 +74,6 @@ export default function Home() {
       </div>
 
       <section id="about" className="reference-about">
-        <p className="about-eyebrow">(Studio 1801 ®)</p>
         <p className="about-statement">
           Studio 1801 ® — a design studio
           <br className="about-desktop-break" />
@@ -93,13 +92,16 @@ export default function Home() {
       </section>
 
       <section id="work" className="reference-work">
+        <div className="work-meta" aria-hidden="true">
+          <span>Selected works</span>
+          <span>Food and beverage</span>
+          <span>03</span>
+          <span>2024—25</span>
+        </div>
         <div className="work-intro">
-          <div>
-            <p className="work-eyebrow">Selected work / 2024—25</p>
-            <h2>Selected works</h2>
-          </div>
+          <h2>Selected works</h2>
           <p className="work-summary">
-            A selection of places, plates, and brands made to be remembered.
+            Digital identities and spaces for places worth remembering.
           </p>
         </div>
 
@@ -134,6 +136,37 @@ export default function Home() {
               <p>Food studio <span>·</span> Web experience</p>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section id="what-we-do" className="reference-services">
+        <h2 className="sr-only">What we do</h2>
+        <p className="services-copy">
+          We design and build restaurant websites that help more guests choose
+          you, then make it easier to book, order, and come back.
+        </p>
+
+        <nav className="services-list" aria-label="What we do">
+          <a className="service-item service-item-active" href="mailto:hello@studio1801.com">
+            <span>Website design</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a className="service-item" href="mailto:hello@studio1801.com">
+            <span>Website development</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a className="service-item" href="mailto:hello@studio1801.com">
+            <span>Website integration</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a className="service-item" href="mailto:hello@studio1801.com">
+            <span>SEO development</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div className="services-image">
+          <img src={projectThree} alt="A carefully plated restaurant meal on a dining table" />
         </div>
       </section>
     </main>
