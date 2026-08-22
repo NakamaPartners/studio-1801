@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
+import heroLead from '@assets/Image_7_1787435406771.jpeg';
 import hero1 from '@assets/generated_images/hero-1.jpg';
 import hero2 from '@assets/generated_images/hero-2.jpg';
 import hero3 from '@assets/generated_images/hero-3.jpg';
@@ -14,11 +15,11 @@ const Navbar = () => (
     initial={{ y: -20, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-    className="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-6 text-foreground/90 mix-blend-difference"
+    className="absolute top-0 left-0 z-50 flex w-full items-center justify-between px-4 py-5 text-foreground/90 mix-blend-difference md:px-6 md:py-6"
     style={{ color: 'white' }}
   >
-    <div className="font-display font-semibold text-lg tracking-wide">Studio 1801 <span className="align-super text-xs">®</span></div>
-    <div className="flex gap-8 text-sm font-medium tracking-wide">
+    <div className="font-sans text-base font-semibold tracking-wide md:text-lg">Studio 1801 <span className="align-super text-[9px] md:text-xs">®</span></div>
+    <div className="flex gap-3 text-[11px] font-medium tracking-wide md:gap-8 md:text-sm">
       <a href="#work" className="hover:opacity-70 transition-opacity">Work</a>
       <a href="#about" className="hover:opacity-70 transition-opacity">About</a>
       <a href="#contact" className="hover:opacity-70 transition-opacity">Contact</a>
@@ -29,6 +30,34 @@ const Navbar = () => (
 const HeroGrid = () => {
   return (
     <div className="relative w-full px-2 pt-2 pb-12">
+      <div className="hero-lead group">
+        <img
+          src={heroLead}
+          alt="Soft-focus flowers against a blue sky"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-[1.03]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
+        <div className="relative z-10 flex h-full flex-col justify-between p-5 text-white md:p-8">
+          <div className="flex items-start justify-between gap-6 text-[10px] uppercase tracking-[0.18em] md:text-xs">
+            <span>Image study 01</span>
+            <span>New York · Worldwide</span>
+          </div>
+          <div className="flex items-end justify-between gap-6">
+            <div>
+              <p className="mb-2 font-sans text-xs uppercase tracking-[0.22em] text-white/75 md:text-sm">
+                Independent design studio
+              </p>
+              <h1 className="font-display text-[18vw] font-medium leading-[0.72] tracking-[-0.07em] md:text-[13vw]">
+                Studio <em className="font-display font-normal">1801</em>
+                <span className="ml-1 align-top font-sans text-[4vw] tracking-normal md:text-[2.2vw]">®</span>
+              </h1>
+            </div>
+            <span className="hidden max-w-[18ch] pb-2 text-right font-sans text-sm leading-snug text-white/80 md:block">
+              Brands, products, and spaces with a point of view.
+            </span>
+          </div>
+        </div>
+      </div>
       <div className="hero-grid">
         <div className="hero-cell-1">
           <img src={hero1} alt="Abstract 3D Shape" className="w-full h-full object-cover grayscale-[30%] hover:scale-105 transition-transform duration-[2s] ease-out" />
@@ -39,17 +68,19 @@ const HeroGrid = () => {
         <div className="hero-cell-3">
           <img src={hero3} alt="Tactile materials" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
         </div>
-        <div className="hero-cell-4 relative flex items-center justify-end overflow-visible group">
+         <div className="hero-cell-4 relative flex items-center justify-end overflow-visible group">
            <img src={hero4} alt="Surreal landscape" className="absolute inset-0 w-full h-full object-cover brightness-[0.6] group-hover:scale-105 group-hover:brightness-[0.7] transition-all duration-[2s] ease-out" />
-           <h1 className="relative z-10 font-display font-bold text-[13vw] leading-none text-background pr-[4vw] tracking-tighter">Studio</h1>
+            <p className="relative z-10 max-w-[16ch] pr-[4vw] text-right font-sans text-sm uppercase tracking-[0.16em] text-background/85 md:text-base">
+              Design with a pulse
+            </p>
         </div>
         <div className="hero-cell-5 relative flex items-center justify-start overflow-visible group">
            <div className="absolute inset-0 bg-foreground">
              <img src={proj1} alt="Digital mockup" className="w-full h-full object-cover opacity-[0.55] group-hover:scale-105 group-hover:opacity-[0.7] transition-all duration-[2s] ease-out" />
            </div>
-           <h1 className="relative z-10 font-display font-bold text-[13vw] leading-none text-background pl-[4vw] tracking-tighter">
-             1801 <span className="text-[6vw] align-top text-stroke font-normal">®</span>
-           </h1>
+            <p className="relative z-10 pl-[4vw] font-display text-[8vw] font-medium italic leading-none tracking-[-0.06em] text-background md:text-[6vw]">
+              1801
+            </p>
         </div>
       </div>
     </div>
