@@ -4,7 +4,7 @@ import projectOne from '@assets/Unknown_1787438547314.png';
 import projectTwo from '@assets/Unknown1_1787438547314.png';
 import projectThree from '@assets/Unknown2_1787438547314.png';
 import serviceDesign from '@assets/image_1787440461289.png';
-import serviceDevelopment from '@assets/image_1787440585481.png';
+import serviceDevelopment from '@assets/image_1787441232956.png';
 import serviceIntegration from '@assets/image_1787440676159.png';
 import serviceSeo from '@assets/image_1787440851872.png';
 
@@ -17,7 +17,7 @@ const serviceOptions = [
   {
     label: 'Website Development',
     image: serviceDevelopment,
-    alt: 'Abstract red character texture on a white background',
+    alt: 'Abstract red, orange, and blue vertical texture',
   },
   {
     label: 'Website Integration',
