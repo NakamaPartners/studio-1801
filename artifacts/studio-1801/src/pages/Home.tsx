@@ -1,4 +1,7 @@
 import heroLead from '@assets/Image_7_1787435406771.jpeg';
+import projectOne from '@assets/generated_images/project-1.jpg';
+import projectTwo from '@assets/generated_images/project-2.jpg';
+import projectThree from '@assets/generated_images/project-3.jpg';
 
 export default function Home() {
   return (
@@ -46,7 +49,7 @@ export default function Home() {
           <strong>STUDIO 1801</strong>
         </footer>
 
-        <section id="work" className="reference-right">
+        <section className="reference-right">
           <div className="reference-work-copy">
             <h2>
               Make a better first
@@ -87,6 +90,58 @@ export default function Home() {
           <span aria-hidden="true">•</span>
           Let&apos;s chat
         </a>
+      </section>
+
+      <section id="work" className="reference-work">
+        <div className="work-intro">
+          <div>
+            <p className="work-eyebrow">Selected projects / 01—03</p>
+            <h2>Our Work</h2>
+          </div>
+          <p className="work-summary">
+            Brand worlds and digital spaces for food, drink, and places worth
+            remembering.
+          </p>
+        </div>
+
+        <div className="work-list">
+          <a className="work-item" href="#contact">
+            <span className="work-number">01</span>
+            <div className="work-title">
+              <h3>Common Table</h3>
+              <p>Restaurant identity · Digital</p>
+            </div>
+            <span className="work-year">2025</span>
+            <div className="work-thumb">
+              <img src={projectOne} alt="Common Table project" />
+            </div>
+            <span className="work-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a className="work-item" href="#contact">
+            <span className="work-number">02</span>
+            <div className="work-title">
+              <h3>After Hours</h3>
+              <p>Bar concept · Art direction</p>
+            </div>
+            <span className="work-year">2024</span>
+            <div className="work-thumb">
+              <img src={projectTwo} alt="After Hours project" />
+            </div>
+            <span className="work-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a className="work-item" href="#contact">
+            <span className="work-number">03</span>
+            <div className="work-title">
+              <h3>Field Notes</h3>
+              <p>Food studio · Web experience</p>
+            </div>
+            <span className="work-year">2024</span>
+            <div className="work-thumb">
+              <img src={projectThree} alt="Field Notes project" />
+            </div>
+            <span className="work-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
       </section>
     </main>
   );
