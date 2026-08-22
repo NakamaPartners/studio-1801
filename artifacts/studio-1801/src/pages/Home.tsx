@@ -3,31 +3,31 @@ import heroLead from '@assets/Image_7_1787435406771.jpeg';
 import projectOne from '@assets/Unknown_1787438547314.png';
 import projectTwo from '@assets/Unknown1_1787438547314.png';
 import projectThree from '@assets/Unknown2_1787438547314.png';
-import serviceDesign from '@assets/image_1787439812478.png';
-import serviceDevelopment from '@assets/image_1787439829476.png';
-import serviceIntegration from '@assets/image_1787439844031.png';
-import serviceSeo from '@assets/image_1787439859107.png';
+import serviceDesign from '@assets/image_1787440461289.png';
+import serviceDevelopment from '@assets/image_1787440585481.png';
+import serviceIntegration from '@assets/image_1787440676159.png';
+import serviceSeo from '@assets/image_1787440851872.png';
 
 const serviceOptions = [
   {
     label: 'Website Design',
     image: serviceDesign,
-    alt: 'Bread-walk bakery website shown on a phone',
+    alt: 'Abstract blue, coral, and cream texture',
   },
   {
     label: 'Website Development',
     image: serviceDevelopment,
-    alt: 'Website development code shown in browser tools',
+    alt: 'Abstract red character texture on a white background',
   },
   {
     label: 'Website Integration',
     image: serviceIntegration,
-    alt: 'Restaurant ordering and payment website on a laptop',
+    alt: 'Soft abstract landscape in muted neutral tones',
   },
   {
     label: 'SEO Development',
     image: serviceSeo,
-    alt: 'Restaurant search results displayed on a phone',
+    alt: 'Abstract rippled image with soft blue, green, and coral tones',
   },
 ];
 
