@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -80,7 +80,7 @@
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-sans: Arial, Helvetica, sans-serif;
   --app-font-display: 'Cormorant Garamond', Georgia, serif;
   --radius: 0rem; /* Sharp edges for editorial look */
 }
@@ -129,48 +129,17 @@
   }
 }
 
-/* Custom Utilities for the Grid */
-.hero-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr;
-  gap: 6px;
-  height: 56vh;
-  min-height: 420px;
-  background-color: hsl(var(--border)); /* The gaps will be the border color */
-  border: 6px solid hsl(var(--border));
-}
-
+/* Custom utilities for the lead image */
 .hero-lead {
   position: relative;
   height: 43vh;
   min-height: 360px;
-  margin-bottom: 6px;
   overflow: hidden;
   background: hsl(var(--border));
   border: 6px solid hsl(var(--border));
 }
 
-.hero-grid > div {
-  background-color: hsl(var(--background));
-  position: relative;
-  overflow: hidden;
-}
-
-/* Specific cell placements */
-.hero-cell-1 { grid-column: span 2; grid-row: span 1; }
-.hero-cell-2 { grid-column: span 1; grid-row: span 1; }
-.hero-cell-3 { grid-column: span 1; grid-row: span 1; }
-.hero-cell-4 { grid-column: span 2; grid-row: span 1; }
-.hero-cell-5 { grid-column: span 2; grid-row: span 1; }
-
 @media (max-width: 768px) {
-  .hero-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    height: auto;
-    aspect-ratio: 1 / 1.1;
-  }
   .hero-lead {
     height: 38vh;
     min-height: 290px;

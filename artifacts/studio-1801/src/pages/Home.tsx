@@ -3,9 +3,6 @@ import { ArrowUpRight } from 'lucide-react';
 
 import heroLead from '@assets/Image_7_1787435406771.jpeg';
 import hero1 from '@assets/generated_images/hero-1.jpg';
-import hero2 from '@assets/generated_images/hero-2.jpg';
-import hero3 from '@assets/generated_images/hero-3.jpg';
-import hero4 from '@assets/generated_images/hero-4.jpg';
 import proj1 from '@assets/generated_images/project-1.jpg';
 import proj2 from '@assets/generated_images/project-2.jpg';
 import proj3 from '@assets/generated_images/project-3.jpg';
@@ -56,31 +53,6 @@ const HeroGrid = () => {
               Brands, products, and spaces with a point of view.
             </span>
           </div>
-        </div>
-      </div>
-      <div className="hero-grid">
-        <div className="hero-cell-1">
-          <img src={hero1} alt="Abstract 3D Shape" className="w-full h-full object-cover grayscale-[30%] hover:scale-105 transition-transform duration-[2s] ease-out" />
-        </div>
-        <div className="hero-cell-2">
-          <img src={hero2} alt="Fashion silhouette" className="w-full h-full object-cover grayscale hover:scale-105 transition-transform duration-[2s] ease-out" />
-        </div>
-        <div className="hero-cell-3">
-          <img src={hero3} alt="Tactile materials" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
-        </div>
-         <div className="hero-cell-4 relative flex items-center justify-end overflow-visible group">
-           <img src={hero4} alt="Surreal landscape" className="absolute inset-0 w-full h-full object-cover brightness-[0.6] group-hover:scale-105 group-hover:brightness-[0.7] transition-all duration-[2s] ease-out" />
-            <p className="relative z-10 max-w-[16ch] pr-[4vw] text-right font-sans text-sm uppercase tracking-[0.16em] text-background/85 md:text-base">
-              Design with a pulse
-            </p>
-        </div>
-        <div className="hero-cell-5 relative flex items-center justify-start overflow-visible group">
-           <div className="absolute inset-0 bg-foreground">
-             <img src={proj1} alt="Digital mockup" className="w-full h-full object-cover opacity-[0.55] group-hover:scale-105 group-hover:opacity-[0.7] transition-all duration-[2s] ease-out" />
-           </div>
-            <p className="relative z-10 pl-[4vw] font-display text-[8vw] font-medium italic leading-none tracking-[-0.06em] text-background md:text-[6vw]">
-              1801
-            </p>
         </div>
       </div>
     </div>
