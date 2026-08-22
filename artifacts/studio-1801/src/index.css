@@ -300,7 +300,7 @@
 
 .work-intro h2 {
   margin: 0;
-  font-size: clamp(68px, 8vw, 130px);
+  font-size: clamp(58px, 6.5vw, 104px);
   font-weight: 400;
   line-height: 0.82;
   letter-spacing: -0.075em;
@@ -475,6 +475,8 @@
 .services-list {
   grid-area: list;
   display: flex;
+  justify-self: end;
+  width: min(100%, 260px);
   flex-direction: column;
   align-items: stretch;
   gap: 22px;
@@ -562,6 +564,150 @@
   color: #85817a;
   font-size: clamp(10px, 0.85vw, 12px);
   line-height: 1;
+}
+
+.reference-process {
+  min-height: 1120px;
+  margin-top: 6px;
+  padding: 4vw 4vw 6vw;
+  border-radius: 16px;
+  background: #f3f1eb;
+  color: #181816;
+}
+
+.process-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr 0.4fr;
+  gap: 20px;
+  color: #9a968f;
+  font-size: clamp(7px, 1.15vh, 11px);
+  line-height: 1;
+}
+
+.process-meta span:last-child {
+  text-align: right;
+}
+
+.process-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.55fr);
+  align-items: end;
+  gap: 8vw;
+  padding-top: 7vw;
+  padding-bottom: 5vw;
+}
+
+.process-intro h2 {
+  max-width: 700px;
+  margin: 0;
+  font-size: clamp(68px, 8vw, 130px);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.075em;
+}
+
+.process-intro p {
+  max-width: 250px;
+  margin: 0 0 7px;
+  color: #5e5b56;
+  font-size: clamp(12px, 1.05vw, 15px);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+}
+
+.process-step {
+  min-width: 0;
+}
+
+.process-step-2,
+.process-step-5 {
+  margin-top: 3.5vw;
+}
+
+.process-step-4 {
+  margin-top: 5.5vw;
+}
+
+.process-step-6 {
+  margin-top: 2vw;
+}
+
+.process-duration {
+  display: block;
+  min-height: 13px;
+  margin-bottom: 8px;
+  color: #8b877f;
+  font-size: clamp(8px, 0.72vw, 10px);
+  line-height: 1;
+}
+
+.process-step-image {
+  height: 24vw;
+  min-height: 220px;
+  max-height: 320px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #d8d4cb;
+}
+
+.process-step-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.process-step-copy {
+  margin-top: 12px;
+}
+
+.process-step-copy h3 {
+  margin: 0;
+  font-size: clamp(12px, 0.95vw, 15px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.process-step-copy p {
+  margin: 8px 0 0;
+  color: #77736c;
+  font-size: clamp(9px, 0.72vw, 11px);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+.process-philosophy {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.55fr);
+  align-items: end;
+  gap: 8vw;
+  margin-top: 10vw;
+}
+
+.process-philosophy h3 {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(31px, 3.35vw, 52px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.process-philosophy p {
+  max-width: 250px;
+  margin: 0 0 3px;
+  color: #5e5b56;
+  font-size: clamp(12px, 1.05vw, 15px);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
 }
 
 @media (max-width: 767px) {
@@ -718,7 +864,7 @@
   }
 
   .work-intro h2 {
-    font-size: clamp(60px, 18vw, 84px);
+    font-size: clamp(52px, 15vw, 72px);
   }
 
   .work-summary {
@@ -838,5 +984,95 @@
   .proof-item span {
     font-size: 10px;
     line-height: 1.2;
+  }
+
+  .reference-process {
+    min-height: 0;
+    margin-top: 8px;
+    padding: 56px 24px 70px;
+    border-radius: 20px;
+  }
+
+  .process-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    font-size: 10px;
+  }
+
+  .process-meta span:last-child {
+    text-align: left;
+  }
+
+  .process-intro {
+    display: block;
+    padding-top: 64px;
+    padding-bottom: 44px;
+  }
+
+  .process-intro h2 {
+    font-size: clamp(62px, 18vw, 84px);
+  }
+
+  .process-intro p {
+    max-width: 250px;
+    margin-top: 30px;
+    font-size: 13px;
+  }
+
+  .process-steps {
+    display: block;
+  }
+
+  .process-step,
+  .process-step-2,
+  .process-step-4,
+  .process-step-5,
+  .process-step-6 {
+    margin: 0 0 42px;
+  }
+
+  .process-step:last-child {
+    margin-bottom: 0;
+  }
+
+  .process-duration {
+    min-height: 0;
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .process-step-image {
+    height: 56vw;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .process-step-copy {
+    margin-top: 11px;
+  }
+
+  .process-step-copy h3 {
+    font-size: 23px;
+  }
+
+  .process-step-copy p {
+    max-width: 250px;
+    margin-top: 7px;
+    font-size: 11px;
+  }
+
+  .process-philosophy {
+    display: block;
+    margin-top: 70px;
+  }
+
+  .process-philosophy h3 {
+    font-size: clamp(30px, 8.5vw, 38px);
+  }
+
+  .process-philosophy p {
+    max-width: 260px;
+    margin-top: 24px;
+    font-size: 13px;
   }
 }

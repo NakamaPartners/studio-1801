@@ -42,6 +42,7 @@ export default function Home() {
           <div className="reference-nav-links">
             <a href="#work">Work</a>
             <a href="#services">Services</a>
+            <a href="#process">Process</a>
           </div>
           <a className="reference-project-link" href="mailto:hello@studio1801.com">
             Start a Project <span aria-hidden="true">→</span>
@@ -210,6 +211,89 @@ export default function Home() {
             <strong>Unlimited</strong>
             <span>revisions</span>
           </div>
+        </div>
+      </section>
+
+      <section id="process" className="reference-process">
+        <div className="process-meta" aria-hidden="true">
+          <span>How we work</span>
+          <span>From first idea to launch</span>
+          <span>Studio 1801</span>
+          <span>01—06</span>
+        </div>
+
+        <div className="process-intro">
+          <h2>Design process</h2>
+          <p>
+            Thoughtful work for restaurants that want to be chosen, remembered,
+            and visited again.
+          </p>
+        </div>
+
+        <div className="process-steps">
+          {[
+            {
+              duration: '2–3 days',
+              title: 'Brief and discovery',
+              copy: 'We learn what makes your place worth crossing the street for.',
+              image: serviceDesign,
+              alt: 'Soft blue and coral abstract texture',
+            },
+            {
+              duration: '3–5 days',
+              title: 'Research and direction',
+              copy: 'We find the clearest story, audience, and visual point of view.',
+              image: serviceDevelopment,
+              alt: 'Red, orange, and blue abstract vertical texture',
+            },
+            {
+              duration: '1 week',
+              title: 'Structure and prototype',
+              copy: 'We shape the experience around menus, moments, and momentum.',
+              image: serviceIntegration,
+              alt: 'Soft neutral abstract landscape',
+            },
+            {
+              duration: '1–2 weeks',
+              title: 'Design and refinement',
+              copy: 'We make every page feel as considered as the room itself.',
+              image: serviceSeo,
+              alt: 'Blue, green, and coral abstract rippled texture',
+            },
+            {
+              duration: '1–2 weeks',
+              title: 'Build and integration',
+              copy: 'We connect the tools that make booking and ordering effortless.',
+              image: serviceDesign,
+              alt: 'Soft blue and coral abstract texture',
+            },
+            {
+              duration: 'Ongoing',
+              title: 'Launch and growth',
+              copy: 'We stay close after launch, using what we learn to keep improving.',
+              image: serviceIntegration,
+              alt: 'Soft neutral abstract landscape',
+            },
+          ].map((step, index) => (
+            <article className={`process-step process-step-${index + 1}`} key={step.title}>
+              <span className="process-duration">{step.duration}</span>
+              <div className="process-step-image">
+                <img src={step.image} alt={step.alt} />
+              </div>
+              <div className="process-step-copy">
+                <h3>{step.title}</h3>
+                <p>{step.copy}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="process-philosophy">
+          <h3>A good website should feel like the first warm welcome.</h3>
+          <p>
+            Clear enough to guide a guest, distinctive enough to stay with them,
+            and useful enough to bring them back.
+          </p>
         </div>
       </section>
     </main>
