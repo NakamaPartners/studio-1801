@@ -1,7 +1,7 @@
 import heroLead from '@assets/Image_7_1787435406771.jpeg';
-import projectOne from '@assets/generated_images/project-1.jpg';
-import projectTwo from '@assets/generated_images/project-2.jpg';
-import projectThree from '@assets/generated_images/project-3.jpg';
+import projectOne from '@assets/Unknown_1787438547314.png';
+import projectTwo from '@assets/Unknown1_1787438547314.png';
+import projectThree from '@assets/Unknown2_1787438547314.png';
 
 export default function Home() {
   return (
@@ -95,52 +95,45 @@ export default function Home() {
       <section id="work" className="reference-work">
         <div className="work-intro">
           <div>
-            <p className="work-eyebrow">Selected projects / 01—03</p>
-            <h2>Our Work</h2>
+            <p className="work-eyebrow">Selected work / 2024—25</p>
+            <h2>Selected works</h2>
           </div>
           <p className="work-summary">
-            Brand worlds and digital spaces for food, drink, and places worth
-            remembering.
+            A selection of places, plates, and brands made to be remembered.
           </p>
         </div>
 
-        <div className="work-list">
-          <a className="work-item" href="#contact">
-            <span className="work-number">01</span>
-            <div className="work-title">
-              <h3>Common Table</h3>
-              <p>Restaurant identity · Digital</p>
+        <div className="work-grid">
+          <article className="work-card work-card-tall">
+            <div className="work-card-image">
+              <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" />
+              <span className="work-card-arrow" aria-hidden="true">↗</span>
             </div>
-            <span className="work-year">2025</span>
-            <div className="work-thumb">
-              <img src={projectOne} alt="Common Table project" />
-            </div>
-            <span className="work-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a className="work-item" href="#contact">
-            <span className="work-number">02</span>
-            <div className="work-title">
+            <div className="work-card-meta">
               <h3>After Hours</h3>
-              <p>Bar concept · Art direction</p>
+              <p>Restaurant identity <span>·</span> Digital</p>
             </div>
-            <span className="work-year">2024</span>
-            <div className="work-thumb">
-              <img src={projectTwo} alt="After Hours project" />
+          </article>
+          <article className="work-card">
+            <div className="work-card-image">
+              <img src={projectTwo} alt="People sharing dim sum at a restaurant table" />
+              <span className="work-card-arrow" aria-hidden="true">↗</span>
             </div>
-            <span className="work-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a className="work-item" href="#contact">
-            <span className="work-number">03</span>
-            <div className="work-title">
+            <div className="work-card-meta">
+              <h3>Common Table</h3>
+              <p>Hospitality <span>·</span> Art direction</p>
+            </div>
+          </article>
+          <article className="work-card">
+            <div className="work-card-image">
+              <img src={projectThree} alt="A Japanese-inspired meal served on a tray" />
+              <span className="work-card-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div className="work-card-meta">
               <h3>Field Notes</h3>
-              <p>Food studio · Web experience</p>
+              <p>Food studio <span>·</span> Web experience</p>
             </div>
-            <span className="work-year">2024</span>
-            <div className="work-thumb">
-              <img src={projectThree} alt="Field Notes project" />
-            </div>
-            <span className="work-arrow" aria-hidden="true">↗</span>
-          </a>
+          </article>
         </div>
       </section>
     </main>
