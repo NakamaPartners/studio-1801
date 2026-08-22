@@ -171,28 +171,45 @@ export default function Home() {
 
       <section id="what-we-do" className="reference-services">
         <h2 className="sr-only">What we do</h2>
-        <p className="services-copy">
-          We design and build restaurant websites that help more guests choose
-          you, then make it easier to book, order, and come back.
-        </p>
+        <div className="services-layout">
+          <p className="services-copy">
+            We design and build restaurant websites that help more guests choose
+            you, then make it easier to book, order, and come back.
+          </p>
 
-        <nav className="services-list" aria-label="What we do">
-          {serviceOptions.map((service, index) => (
-            <button
-              className={`service-item ${activeService === index ? 'service-item-active' : ''}`}
-              key={service.label}
-              type="button"
-              aria-pressed={activeService === index}
-              onClick={() => setActiveService(index)}
-            >
-              <span>{service.label}</span>
-              <span aria-hidden="true">↗</span>
-            </button>
-          ))}
-        </nav>
+          <nav className="services-list" aria-label="What we do">
+            {serviceOptions.map((service, index) => (
+              <button
+                className={`service-item ${activeService === index ? 'service-item-active' : ''}`}
+                key={service.label}
+                type="button"
+                aria-pressed={activeService === index}
+                onClick={() => setActiveService(index)}
+              >
+                <span>{service.label}</span>
+                <span aria-hidden="true">↗</span>
+              </button>
+            ))}
+          </nav>
 
-        <div className="services-image">
-          <img src={serviceOptions[activeService].image} alt={serviceOptions[activeService].alt} />
+          <div className="services-image">
+            <img src={serviceOptions[activeService].image} alt={serviceOptions[activeService].alt} />
+          </div>
+        </div>
+
+        <div className="services-proof" aria-label="Studio 1801 guarantees">
+          <div className="proof-item">
+            <strong>7 day</strong>
+            <span>guarantee delivery</span>
+          </div>
+          <div className="proof-item">
+            <strong>95%</strong>
+            <span>satisfaction rate</span>
+          </div>
+          <div className="proof-item">
+            <strong>Unlimited</strong>
+            <span>revisions</span>
+          </div>
         </div>
       </section>
     </main>
