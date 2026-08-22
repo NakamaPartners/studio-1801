@@ -7,25 +7,39 @@ import serviceDesign from '@assets/image_1787440461289.png';
 import serviceDevelopment from '@assets/image_1787441232956.png';
 import serviceIntegration from '@assets/image_1787440676159.png';
 import serviceSeo from '@assets/image_1787440851872.png';
+import processOne from '@assets/image_1787442021416.png';
+import processTwo from '@assets/image_1787442058572.png';
+import processThree from '@assets/image_1787442170090.png';
+import processFour from '@assets/image_1787442266936.png';
+import processFive from '@assets/image_1787442378754.png';
+import processSix from '@assets/image_1787442428529.png';
 
 const serviceOptions = [
   {
     label: 'Website Design',
+    number: '01',
+    description: 'Distinctive digital identities that make a restaurant feel familiar before a guest ever walks through the door.',
     image: serviceDesign,
     alt: 'Abstract blue, coral, and cream texture',
   },
   {
     label: 'Website Development',
+    number: '02',
+    description: 'Clean, considered code that keeps your site quick, responsive, and easy to use on every screen.',
     image: serviceDevelopment,
     alt: 'Abstract red, orange, and blue vertical texture',
   },
   {
     label: 'Website Integration',
+    number: '03',
+    description: 'The right reservations, ordering, and menu tools connected into one effortless guest journey.',
     image: serviceIntegration,
     alt: 'Soft abstract landscape in muted neutral tones',
   },
   {
     label: 'SEO Development',
+    number: '04',
+    description: 'A clearer structure and smarter content that helps the right guests find you, then choose you.',
     image: serviceSeo,
     alt: 'Abstract rippled image with soft blue, green, and coral tones',
   },
@@ -173,10 +187,13 @@ export default function Home() {
       <section id="what-we-do" className="reference-services">
         <h2 className="sr-only">What we do</h2>
         <div className="services-layout">
-          <p className="services-copy">
-            We design and build restaurant websites that help more guests choose
-            you, then make it easier to book, order, and come back.
-          </p>
+          <div className="services-copy" aria-live="polite">
+            <div className="service-detail" key={activeService}>
+              <span className="service-detail-number">{serviceOptions[activeService].number}</span>
+              <h3>{serviceOptions[activeService].label}</h3>
+              <p>{serviceOptions[activeService].description}</p>
+            </div>
+          </div>
 
           <nav className="services-list" aria-label="What we do">
             {serviceOptions.map((service, index) => (
@@ -236,43 +253,43 @@ export default function Home() {
               duration: '2–3 days',
               title: 'Brief and discovery',
               copy: 'We learn what makes your place worth crossing the street for.',
-              image: serviceDesign,
-              alt: 'Soft blue and coral abstract texture',
+              image: processOne,
+              alt: 'Person standing beneath a wide sky on a checkered landscape',
             },
             {
               duration: '3–5 days',
               title: 'Research and direction',
               copy: 'We find the clearest story, audience, and visual point of view.',
-              image: serviceDevelopment,
-              alt: 'Red, orange, and blue abstract vertical texture',
+              image: processTwo,
+              alt: 'Creative research wall with connected references and notes',
             },
             {
               duration: '1 week',
               title: 'Structure and prototype',
               copy: 'We shape the experience around menus, moments, and momentum.',
-              image: serviceIntegration,
-              alt: 'Soft neutral abstract landscape',
+              image: processThree,
+              alt: 'Black and white architectural structure in a city street',
             },
             {
               duration: '1–2 weeks',
               title: 'Design and refinement',
               copy: 'We make every page feel as considered as the room itself.',
-              image: serviceSeo,
-              alt: 'Blue, green, and coral abstract rippled texture',
+              image: processFour,
+              alt: 'Classic car beside a red wall and reflecting pool',
             },
             {
               duration: '1–2 weeks',
               title: 'Build and integration',
               copy: 'We connect the tools that make booking and ordering effortless.',
-              image: serviceDesign,
-              alt: 'Soft blue and coral abstract texture',
+              image: processFive,
+              alt: 'Light installation with landscapes and colorful lines in a dark space',
             },
             {
               duration: 'Ongoing',
               title: 'Launch and growth',
               copy: 'We stay close after launch, using what we learn to keep improving.',
-              image: serviceIntegration,
-              alt: 'Soft neutral abstract landscape',
+              image: processSix,
+              alt: 'Person looking up beneath a curved sky and checkerboard floor',
             },
           ].map((step, index) => (
             <article className={`process-step process-step-${index + 1}`} key={step.title}>

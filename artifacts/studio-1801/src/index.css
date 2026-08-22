@@ -453,14 +453,40 @@
 
 .services-copy {
   grid-area: copy;
-  max-width: 250px;
+  max-width: 270px;
   margin: 0;
   color: #181816;
-  font-size: clamp(14px, 1.2vw, 18px);
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: -0.025em;
   text-align: left;
+}
+
+.service-detail {
+  animation: service-detail-in 240ms ease both;
+}
+
+.service-detail-number {
+  display: block;
+  margin-bottom: 15px;
+  color: #b06f5c;
+  font-size: clamp(9px, 0.8vw, 11px);
+  line-height: 1;
+}
+
+.service-detail h3 {
+  max-width: 260px;
+  margin: 0;
+  font-size: clamp(24px, 2.25vw, 36px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.service-detail p {
+  max-width: 260px;
+  margin: 17px 0 0;
+  color: #5e5b56;
+  font-size: clamp(12px, 1vw, 15px);
+  line-height: 1.45;
+  letter-spacing: -0.02em;
 }
 
 .services-layout {
@@ -564,6 +590,18 @@
   color: #85817a;
   font-size: clamp(10px, 0.85vw, 12px);
   line-height: 1;
+}
+
+@keyframes service-detail-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .reference-process {
@@ -938,7 +976,22 @@
   .services-copy {
     order: 1;
     max-width: none;
-    font-size: 15px;
+  }
+
+  .service-detail-number {
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .service-detail h3 {
+    max-width: 300px;
+    font-size: 30px;
+  }
+
+  .service-detail p {
+    max-width: 300px;
+    margin-top: 12px;
+    font-size: 13px;
   }
 
   .services-list {
