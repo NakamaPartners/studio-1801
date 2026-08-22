@@ -453,12 +453,13 @@
 }
 
 .services-copy {
-  max-width: 400px;
+  max-width: 250px;
   margin: 0;
-  font-size: clamp(21px, 2.3vw, 27px);
-  font-weight: 600;
-  line-height: 1.06;
-  letter-spacing: -0.06em;
+  color: #5e5b56;
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
 }
 
 .services-list {
@@ -472,10 +473,17 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  width: 100%;
   gap: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: #9a968f;
+  cursor: pointer;
+  font-family: inherit;
   font-size: clamp(11px, 1.15vw, 14px);
   line-height: 1;
+  text-align: left;
   text-decoration: none;
   transition: color 180ms ease;
 }
@@ -736,7 +744,7 @@
 
   .services-copy {
     max-width: none;
-    font-size: clamp(29px, 8.8vw, 38px);
+    font-size: 15px;
   }
 
   .services-list {

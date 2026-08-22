@@ -1,9 +1,39 @@
+import { useState } from 'react';
 import heroLead from '@assets/Image_7_1787435406771.jpeg';
 import projectOne from '@assets/Unknown_1787438547314.png';
 import projectTwo from '@assets/Unknown1_1787438547314.png';
 import projectThree from '@assets/Unknown2_1787438547314.png';
+import serviceDesign from '@assets/image_1787439812478.png';
+import serviceDevelopment from '@assets/image_1787439829476.png';
+import serviceIntegration from '@assets/image_1787439844031.png';
+import serviceSeo from '@assets/image_1787439859107.png';
+
+const serviceOptions = [
+  {
+    label: 'Website Design',
+    image: serviceDesign,
+    alt: 'Bread-walk bakery website shown on a phone',
+  },
+  {
+    label: 'Website Development',
+    image: serviceDevelopment,
+    alt: 'Website development code shown in browser tools',
+  },
+  {
+    label: 'Website Integration',
+    image: serviceIntegration,
+    alt: 'Restaurant ordering and payment website on a laptop',
+  },
+  {
+    label: 'SEO Development',
+    image: serviceSeo,
+    alt: 'Restaurant search results displayed on a phone',
+  },
+];
 
 export default function Home() {
+  const [activeService, setActiveService] = useState(0);
+
   return (
     <main className="reference-page">
       <div className="reference-frame">
@@ -147,26 +177,22 @@ export default function Home() {
         </p>
 
         <nav className="services-list" aria-label="What we do">
-          <a className="service-item service-item-active" href="mailto:hello@studio1801.com">
-            <span>Website design</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <a className="service-item" href="mailto:hello@studio1801.com">
-            <span>Website development</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <a className="service-item" href="mailto:hello@studio1801.com">
-            <span>Website integration</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <a className="service-item" href="mailto:hello@studio1801.com">
-            <span>SEO development</span>
-            <span aria-hidden="true">↗</span>
-          </a>
+          {serviceOptions.map((service, index) => (
+            <button
+              className={`service-item ${activeService === index ? 'service-item-active' : ''}`}
+              key={service.label}
+              type="button"
+              aria-pressed={activeService === index}
+              onClick={() => setActiveService(index)}
+            >
+              <span>{service.label}</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          ))}
         </nav>
 
         <div className="services-image">
-          <img src={projectThree} alt="A carefully plated restaurant meal on a dining table" />
+          <img src={serviceOptions[activeService].image} alt={serviceOptions[activeService].alt} />
         </div>
       </section>
     </main>
