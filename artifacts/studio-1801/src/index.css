@@ -27,7 +27,7 @@
 
 .reference-page {
   min-height: 100dvh;
-  display: flex;
+  display: block;
   padding: 16px 24px 13px 30px;
   background: #1c1c1c;
 }
@@ -128,13 +128,6 @@
   line-height: 0.9;
 }
 
-.reference-apostrophe {
-  position: relative;
-  top: -0.06em;
-  margin-inline: 0.01em;
-  color: #d74a2c;
-}
-
 .reference-description {
   margin: 14px 0 0;
   color: #5e5b56;
@@ -229,6 +222,60 @@
   top: -1px;
   margin-left: 1px;
   font-size: 0.59vw;
+}
+
+.reference-about {
+  display: flex;
+  min-height: 620px;
+  margin-top: 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #f3f1eb;
+  color: #181816;
+  text-align: center;
+}
+
+.about-eyebrow {
+  margin: 0 0 44px;
+  color: #77746f;
+  font-size: 0.78vw;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.about-statement {
+  margin: 0;
+  font-size: 3.1vw;
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 36px;
+  padding: 13px 19px;
+  border-radius: 999px;
+  background: #181816;
+  color: #f3f1eb;
+  font-size: 0.82vw;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.about-cta:hover {
+  opacity: 0.82;
+  transform: translateY(-2px);
+}
+
+.about-cta span {
+  font-size: 1.1em;
 }
 
 @media (max-width: 767px) {
@@ -341,5 +388,32 @@
 
   .reference-scroll {
     display: none;
+  }
+
+  .reference-about {
+    min-height: 540px;
+    margin-top: 8px;
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .about-eyebrow {
+    margin-bottom: 34px;
+    font-size: 10px;
+  }
+
+  .about-statement {
+    font-size: clamp(28px, 8.6vw, 38px);
+    line-height: 1.07;
+  }
+
+  .about-desktop-break {
+    display: none;
+  }
+
+  .about-cta {
+    margin-top: 34px;
+    padding: 14px 20px;
+    font-size: 13px;
   }
 }

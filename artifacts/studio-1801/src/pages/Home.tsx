@@ -27,7 +27,7 @@ export default function Home() {
           <h1>
             The work you
             <br />
-            can<span className="reference-apostrophe">’</span>t unsee.
+            can’t unsee.
           </h1>
           <p className="reference-description">
             Thoughtful digital spaces for places
@@ -69,6 +69,25 @@ export default function Home() {
           scroll <span>∨</span>
         </span>
       </div>
+
+      <section id="about" className="reference-about">
+        <p className="about-eyebrow">(Studio 1801 ®)</p>
+        <p className="about-statement">
+          Studio 1801 ® — a design studio
+          <br className="about-desktop-break" />
+          working at the intersection of brand,
+          <br className="about-desktop-break" />
+          product, and technology. Designing
+          <br className="about-desktop-break" />
+          brands and digital products that move
+          <br className="about-desktop-break" />
+          businesses forward.
+        </p>
+        <a className="about-cta" href="mailto:hello@studio1801.com">
+          <span aria-hidden="true">•</span>
+          Let&apos;s chat
+        </a>
+      </section>
     </main>
   );
 }
