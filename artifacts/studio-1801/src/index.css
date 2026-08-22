@@ -28,15 +28,15 @@
 .reference-page {
   min-height: 100dvh;
   display: flex;
-  padding: 16px 30px;
+  padding: 16px 24px 13px 30px;
   background: #1c1c1c;
 }
 
 .reference-frame {
   position: relative;
   width: 100%;
-  height: calc(100dvh - 32px);
-  min-height: 544px;
+  height: calc(100dvh - 29px);
+  min-height: 0;
   overflow: hidden;
   border-radius: 16px;
   background: #f3f1eb;
@@ -45,7 +45,9 @@
 
 .reference-nav {
   position: absolute;
-  inset: 34px 40px auto;
+  top: 34px;
+  right: 30px;
+  left: 40px;
   z-index: 2;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -84,7 +86,7 @@
 .reference-meta {
   position: absolute;
   top: 67px;
-  right: 40px;
+  right: 30px;
   left: 40px;
   display: grid;
   grid-template-columns: 31% 16% 28% 25%;
@@ -144,7 +146,7 @@
 .reference-right {
   position: absolute;
   top: 85px;
-  right: 40px;
+  right: 38px;
   width: 476px;
 }
 
@@ -189,7 +191,7 @@
 
 .reference-footer {
   position: absolute;
-  bottom: 13px;
+  bottom: 16px;
   left: 40px;
 }
 
@@ -214,7 +216,7 @@
 
 .reference-scroll {
   position: absolute;
-  right: 40px;
+  right: 30px;
   bottom: 14px;
   color: #aaa69f;
   font-size: 7px;
