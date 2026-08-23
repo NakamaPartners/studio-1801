@@ -105,7 +105,7 @@
   position: absolute;
   top: 34.5vh;
   left: 28px;
-  width: 32vw;
+  width: 34vw;
 }
 
 .reference-kicker {
@@ -129,10 +129,10 @@
 }
 
 .reference-left h1 {
-  max-width: 370px;
-  font-size: clamp(47px, 6.6vh, 60px);
+  max-width: 390px;
+  font-size: clamp(52px, 7.5vh, 68px);
   font-weight: 400;
-  line-height: 0.9;
+  line-height: 0.88;
   letter-spacing: -0.075em;
   text-wrap: balance;
 }
