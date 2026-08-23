@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -102,7 +103,7 @@
 
 .reference-left {
   position: absolute;
-  top: 37.5vh;
+  top: 34.5vh;
   left: 28px;
   width: 32vw;
 }
@@ -116,25 +117,167 @@
 }
 
 .reference-left h1,
-.reference-right h2 {
+.reference-right h2,
+.work-intro h2,
+.process-intro h2,
+.process-philosophy h3,
+.about-statement {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: -0.065em;
 }
 
 .reference-left h1 {
-  max-width: 320px;
-  font-size: clamp(44px, 5.4vh, 48px);
-  line-height: 0.9;
+  max-width: 370px;
+  font-size: clamp(48px, 7vh, 62px);
+  font-weight: 600;
+  line-height: 0.84;
+  letter-spacing: -0.085em;
 }
 
 .reference-description {
-  margin: 18px 0 0;
+  max-width: 290px;
+  margin: 22px 0 0;
   color: #5e5b56;
-  font-size: clamp(9px, 1.7vh, 15px);
+  font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(10px, 1.7vh, 15px);
+  font-weight: 500;
   line-height: 1.45;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.hero-checks {
+  display: grid;
+  max-width: 350px;
+  margin: 22px 0 0;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px 16px;
+  color: #77736c;
+  font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(10px, 1.3vh, 12px);
+  font-weight: 400;
+  line-height: 1.25;
   letter-spacing: -0.015em;
+  list-style: none;
+}
+
+.hero-checks li {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  min-width: 0;
+}
+
+.hero-checks li > span {
+  display: inline-grid;
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  place-items: center;
+  border: 1px solid #d8d3ca;
+  border-radius: 50%;
+  color: #aaa39a;
+  font-size: 9px;
+  line-height: 1;
+}
+
+.hero-checks .hero-check-emphasis {
+  color: #181816;
+  font-weight: 500;
+}
+
+.hero-checks .hero-check-emphasis > span {
+  border-color: #181816;
+  background: #181816;
+  color: #fffaf3;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+
+.hero-cta,
+.hero-secondary-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+  padding: 12px 13px 11px 15px;
+  border-radius: 0;
+  font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(11px, 1.7vh, 15px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.hero-cta {
+  border: 1px solid #c7643b;
+  background: #c7643b;
+  color: #fffaf3;
+}
+
+.hero-cta:hover {
+  border-color: #181816;
+  background: #181816;
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.hero-cta span,
+.hero-secondary-cta span {
+  font-size: 1.15em;
+}
+
+.hero-secondary-cta {
+  gap: 8px;
+  padding-right: 13px;
+  padding-left: 15px;
+  border: 1px solid rgb(24 24 22 / 24%);
+  color: #181816;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.hero-secondary-cta:hover {
+  border-color: #181816;
+  background: #181816;
+  color: #fffaf3;
+  transform: translateY(-2px);
+}
+
+.hero-work-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: #858079;
+  font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(10px, 1.3vh, 12px);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.hero-work-link > span {
+  color: #b06f5c;
+  font-size: 1.15em;
+  line-height: 1;
+}
+
+.hero-work-link:hover {
+  color: #181816;
+  transform: translateX(2px);
 }
 
 .reference-right {
@@ -202,7 +345,7 @@
 
 .reference-footer strong {
   display: block;
-  font-size: clamp(24px, 3.3vh, 29px);
+  font-size: clamp(20px, 2.8vh, 24px);
   font-weight: 800;
   line-height: 0.8;
   letter-spacing: -0.075em;
@@ -459,30 +602,34 @@
   text-align: left;
 }
 
-.service-detail {
-  animation: service-detail-in 240ms ease both;
+.services-overview {
+  margin: 0;
+  color: #181816;
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
 }
 
-.service-detail-number {
-  display: block;
-  margin-bottom: 15px;
-  color: #b06f5c;
-  font-size: clamp(9px, 0.8vw, 11px);
-  line-height: 1;
+.service-detail {
+  margin-top: 30px;
+  animation: service-detail-in 240ms ease both;
 }
 
 .service-detail h3 {
   max-width: 260px;
   margin: 0;
-  font-size: clamp(24px, 2.25vw, 36px);
+  color: #181816;
+  font-family: inherit;
+  font-size: clamp(12px, 1vw, 15px);
   font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: -0.06em;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
 }
 
 .service-detail p {
   max-width: 260px;
-  margin: 17px 0 0;
+  margin: 8px 0 0;
   color: #5e5b56;
   font-size: clamp(12px, 1vw, 15px);
   line-height: 1.45;
@@ -804,13 +951,42 @@
   }
 
   .reference-left h1 {
-    font-size: clamp(42px, 12.5vw, 54px);
+    font-size: clamp(46px, 14vw, 60px);
   }
 
   .reference-description {
     margin-top: 20px;
     font-size: 13px;
     line-height: 1.55;
+  }
+
+  .hero-checks {
+    max-width: 330px;
+    margin-top: 20px;
+    gap: 9px 12px;
+    font-size: 11px;
+  }
+
+  .hero-actions {
+    margin-top: 23px;
+    gap: 10px;
+  }
+
+  .hero-cta,
+  .hero-secondary-cta {
+    min-height: 44px;
+    padding: 12px 14px 11px 16px;
+    font-size: 13px;
+  }
+
+  .hero-secondary-cta {
+    padding-right: 14px;
+    padding-left: 16px;
+  }
+
+  .hero-work-link {
+    margin-top: 12px;
+    font-size: 11px;
   }
 
   .reference-description br,
@@ -829,7 +1005,7 @@
   }
 
   .reference-footer strong {
-    font-size: clamp(39px, 12vw, 52px);
+    font-size: clamp(23px, 6vw, 30px);
   }
 
   .reference-right {
@@ -978,14 +1154,18 @@
     max-width: none;
   }
 
-  .service-detail-number {
-    margin-bottom: 12px;
-    font-size: 10px;
+  .services-overview {
+    max-width: 300px;
+    font-size: 15px;
+  }
+
+  .service-detail {
+    margin-top: 30px;
   }
 
   .service-detail h3 {
     max-width: 300px;
-    font-size: 30px;
+    font-size: 13px;
   }
 
   .service-detail p {

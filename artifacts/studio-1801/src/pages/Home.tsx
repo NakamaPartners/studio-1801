@@ -71,19 +71,47 @@ export default function Home() {
         </div>
 
         <section id="services" className="reference-left">
-          <p className="reference-kicker">For food and beverage</p>
           <h1>
-            The work you
+            See Your New
             <br />
-            can’t unsee.
+            Website.
+            <br />
+            Before You Pay.
           </h1>
           <p className="reference-description">
-            Thoughtful digital spaces for places
-            <br />
-            worth remembering. Strategy, design,
-            <br />
-            and development without the noise.
+            7 Ways Your Website Is Losing Customers. We&apos;ll Show You Exactly How
+            We&apos;d Fix Them.
           </p>
+          <ul className="hero-checks" aria-label="What is included">
+            <li>
+              <span aria-hidden="true">✓</span>
+              Custom restaurant homepage
+            </li>
+            <li>
+              <span aria-hidden="true">✓</span>
+              Live in 48 hours
+            </li>
+            <li>
+              <span aria-hidden="true">✓</span>
+              7 revenue leaks identified
+            </li>
+            <li className="hero-check-emphasis">
+              <span aria-hidden="true">✓</span>
+              Keep it. No risk.
+            </li>
+          </ul>
+          <div className="hero-actions">
+            <a className="hero-cta" href="mailto:hello@studio1801.com?subject=Claim%20my%20Free%20Offer">
+              Claim your Free Offer <span aria-hidden="true">→</span>
+            </a>
+            <a className="hero-secondary-cta" href="mailto:hello@studio1801.com?subject=Contact%20Studio%201801">
+              Contact us <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <a className="hero-work-link" href="#work">
+            <span aria-hidden="true">•</span>
+            Build your website before you spend a dollar
+          </a>
         </section>
 
         <footer className="reference-footer">
@@ -120,7 +148,7 @@ export default function Home() {
 
       <section id="about" className="reference-about">
         <p className="about-statement">
-          Studio 1801 ® — a design studio
+          Studio 1801 ®, a design studio
           <br className="about-desktop-break" />
           working at the intersection of brand,
           <br className="about-desktop-break" />
@@ -141,7 +169,7 @@ export default function Home() {
           <span>Selected works</span>
           <span>Food and beverage</span>
           <span>03</span>
-          <span>2024—25</span>
+          <span>2024 / 25</span>
         </div>
         <div className="work-intro">
           <h2>Selected works</h2>
@@ -188,8 +216,11 @@ export default function Home() {
         <h2 className="sr-only">What we do</h2>
         <div className="services-layout">
           <div className="services-copy" aria-live="polite">
+            <p className="services-overview">
+              We design and build restaurant websites that help more guests choose
+              you, then make it easier to book, order, and come back.
+            </p>
             <div className="service-detail" key={activeService}>
-              <span className="service-detail-number">{serviceOptions[activeService].number}</span>
               <h3>{serviceOptions[activeService].label}</h3>
               <p>{serviceOptions[activeService].description}</p>
             </div>
@@ -236,7 +267,7 @@ export default function Home() {
           <span>How we work</span>
           <span>From first idea to launch</span>
           <span>Studio 1801</span>
-          <span>01—06</span>
+          <span>01 / 06</span>
         </div>
 
         <div className="process-intro">
