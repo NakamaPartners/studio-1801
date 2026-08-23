@@ -18,7 +18,7 @@
 }
 
 :root {
-  --cream: #faf9f6;
+  --cream: #f3f1ec;
   --charcoal: #161616;
   --gray-text: #6b6965;
   --gray-light: #9a968f;
@@ -126,9 +126,9 @@
 .reference-left h1 {
   font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(48px, 6.5vw, 92px);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 0.9;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   margin: 0 0 24px;
   text-wrap: balance;
 }
@@ -315,7 +315,7 @@
   }
 
   .reference-left h1 {
-    font-size: 3.6rem;
+    font-size: 3.85rem;
     line-height: 0.92;
   }
 
@@ -364,10 +364,10 @@
   }
 
   .reference-work-copy h2 {
-    font-size: 2.75rem;
+    font-size: 2.35rem;
     max-width: 10.5em;
-    line-height: 1.02;
-    letter-spacing: -0.04em;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
     margin-bottom: 0.9rem;
   }
 
@@ -667,6 +667,35 @@
   margin: 0;
   max-width: 12em;
 }
+.strategy-lead {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.strategy-opportunity-line {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-text);
+  margin: 28px 0 0;
+  max-width: 340px;
+}
+.strategy-opportunity-line strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+.strategy-urgency {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-text);
+  margin: auto 0 0;
+  padding-top: 48px;
+  max-width: 300px;
+}
+.strategy-urgency strong {
+  color: var(--charcoal);
+  font-weight: 500;
+}
 .strategy-facts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -721,59 +750,6 @@
   font-size: 11px;
   color: var(--gray-text);
   margin-top: 12px;
-}
-.strategy-math {
-  margin-top: 6vw;
-}
-.strategy-math-intro {
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 470px;
-  margin: 0 0 44px;
-}
-.strategy-math-row {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
-  gap: 24px;
-  align-items: baseline;
-  padding: 22px 0;
-}
-.strategy-math-row h3 {
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  margin: 0;
-}
-.strategy-math-row p {
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--gray-text);
-  margin: 0;
-  max-width: 400px;
-}
-.strategy-math-row strong,
-.strategy-math-total strong {
-  font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  letter-spacing: -0.02em;
-  text-align: right;
-  white-space: nowrap;
-}
-.strategy-math-total {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: baseline;
-  margin-top: 28px;
-  padding-top: 28px;
-}
-.strategy-math-total p {
-  font-size: 14px;
-  margin: 0;
-}
-.strategy-math-total strong {
-  font-size: 40px;
 }
 
 /* SERVICES */
@@ -1040,9 +1016,9 @@
 
 /* CONTACT */
 .reference-contact {
-  padding: 8vw 5vw 4vw;
-  background: var(--charcoal);
-  color: var(--cream);
+  padding: 6vw 5vw 4vw;
+  background: var(--cream);
+  color: var(--charcoal);
   border-radius: 16px;
   margin-top: 16px;
   min-height: 80vh;
@@ -1065,28 +1041,51 @@
 .contact-content {
   flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
+  gap: 5vw;
 }
 .contact-editorial h2 {
-  font-size: clamp(48px, 7vw, 100px);
+  font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(44px, 6vw, 88px);
   font-weight: 400;
   line-height: 0.95;
-  letter-spacing: -0.05em;
-  margin: 0 0 40px;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4vw;
+  width: 100%;
+  max-width: 760px;
+}
+.contact-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--gray-text);
+  margin-bottom: 12px;
+}
+.contact-info-item p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
 }
 .contact-email {
   display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: clamp(18px, 2vw, 24px);
-  color: var(--accent);
+  align-items: baseline;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--charcoal);
   text-decoration: none;
   transition: opacity 0.2s;
 }
 .contact-email:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .contact-footer {
   display: flex;
@@ -1162,6 +1161,11 @@
     gap: 2rem;
     margin-bottom: 3.75rem;
   }
+  .strategy-urgency {
+    font-size: 0.875rem;
+    max-width: 18.75rem;
+    padding-top: 3rem;
+  }
   .strategy-visual figcaption {
     font-size: 0.69rem;
     margin-top: 0.75rem;
@@ -1169,26 +1173,10 @@
   .strategy-visuals {
     gap: 1.5rem;
   }
-  .strategy-math-intro,
-  .strategy-math-total p {
-    font-size: 0.875rem;
-  }
-  .strategy-math-intro {
-    max-width: 29.4rem;
-    margin-bottom: 2.75rem;
-  }
-  .strategy-math-row h3 {
+  .strategy-opportunity-line {
     font-size: 0.94rem;
-  }
-  .strategy-math-row p {
-    font-size: 0.81rem;
-    max-width: 25rem;
-  }
-  .strategy-math-row strong {
-    font-size: 1.5rem;
-  }
-  .strategy-math-total strong {
-    font-size: 2.5rem;
+    max-width: 21.25rem;
+    margin-top: 1.75rem;
   }
   .reference-services {
     padding: 13vw 6vw 2.5vw;
@@ -1229,10 +1217,18 @@
     max-width: 18rem;
   }
   .contact-editorial h2 {
-    font-size: 6.3rem;
+    font-size: 5.25rem;
   }
+  .contact-label {
+    font-size: 0.69rem;
+    margin-bottom: 0.75rem;
+  }
+  .contact-info-item p,
   .contact-email {
-    font-size: 1.8rem;
+    font-size: 0.875rem;
+  }
+  .contact-info {
+    max-width: 47.5rem;
   }
   .contact-signoff {
     font-size: 2.7rem;
@@ -1262,8 +1258,9 @@
     font-size: 1.75rem;
   }
   .reference-description {
-    font-size: 0.83rem;
-    max-width: 19.4rem;
+    font-size: 0.94rem;
+    max-width: 24rem;
+    text-wrap: balance;
   }
   .hero-eyebrow {
     font-size: 0.625rem;
@@ -1388,25 +1385,15 @@
   .strategy-arrow {
     margin-bottom: 24px;
   }
+  .strategy-urgency {
+    padding-top: 28px;
+  }
   .strategy-visuals {
     grid-template-columns: 1fr;
     margin-top: 48px;
   }
-  .strategy-math {
-    margin-top: 48px;
-  }
-  .strategy-math-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 20px 0;
-  }
-  .strategy-math-row strong,
-  .strategy-math-total strong {
-    text-align: left;
-  }
-  .strategy-math-total {
-    grid-template-columns: 1fr;
-    gap: 8px;
+  .strategy-opportunity-line {
+    margin-top: 20px;
   }
 
   /* Services Mobile */
@@ -1448,6 +1435,13 @@
   }
 
   /* Contact Mobile */
+  .contact-content {
+    gap: 40px;
+  }
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   .contact-footer {
     flex-direction: column;
     align-items: flex-start;

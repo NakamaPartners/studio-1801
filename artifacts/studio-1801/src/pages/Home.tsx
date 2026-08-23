@@ -228,6 +228,14 @@ export default function Home() {
           <div className="strategy-lead">
             <span className="strategy-arrow" aria-hidden="true">&#8600;</span>
             <h2 data-testid="text-strategy-title">The cost of an overlooked website.</h2>
+            <p className="strategy-opportunity-line" data-testid="text-strategy-opportunity">
+              <strong>&asymp; $32,700 a year</strong> back on the table — for a
+              typical 80-seat room with a $42 average check.
+            </p>
+            <p className="strategy-urgency" data-testid="text-strategy-urgency">
+              Every week this waits, another <strong>&asymp; $630</strong> walks
+              past the door.
+            </p>
           </div>
 
           <div className="strategy-details">
@@ -280,39 +288,6 @@ export default function Home() {
           </figure>
         </div>
 
-        <div className="strategy-math" data-testid="strategy-math">
-          <span className="strategy-label">The math</span>
-          <p className="strategy-math-intro">
-            Priced against a typical 80-seat dining room with a $42 average
-            check, here is what each leak quietly walks out with.
-          </p>
-          <div className="strategy-math-rows">
-            <div className="strategy-math-row" data-testid="row-leak-1">
-              <h3>The vibe disconnect</h3>
-              <p>Six covers a week choose the room that looks like it cares.</p>
-              <strong>&minus;$13,100 a year</strong>
-            </div>
-            <div className="strategy-math-row" data-testid="row-leak-2">
-              <h3>The booking friction</h3>
-              <p>Four reservations a week abandoned between hungry and confirmed.</p>
-              <strong>&minus;$8,700 a year</strong>
-            </div>
-            <div className="strategy-math-row" data-testid="row-leak-3">
-              <h3>The invisible menu</h3>
-              <p>Three covers a week lost in searches your PDF never appears in.</p>
-              <strong>&minus;$6,500 a year</strong>
-            </div>
-            <div className="strategy-math-row" data-testid="row-leak-4">
-              <h3>The missing narrative</h3>
-              <p>Two covers a week that price-shop instead of crossing town.</p>
-              <strong>&minus;$4,400 a year</strong>
-            </div>
-          </div>
-          <div className="strategy-math-total" data-testid="row-leak-total">
-            <p>Left on the table, every year</p>
-            <strong>&asymp; $32,700</strong>
-          </div>
-        </div>
       </section>
 
       <section id="what-we-do" className="reference-services" data-testid="section-services">
@@ -460,9 +435,28 @@ export default function Home() {
               Let's build something<br />
               worth remembering.
             </h2>
-            <a href="mailto:hello@studio1801.com" className="contact-email" data-testid="link-contact-email">
-              hello@studio1801.com <span aria-hidden="true">→</span>
-            </a>
+          </div>
+          <div className="contact-info" data-testid="contact-info">
+            <div className="contact-info-item">
+              <span className="contact-label">Email</span>
+              <a href="mailto:hello@studio1801.com" className="contact-email" data-testid="link-contact-email">
+                hello@studio1801.com <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div className="contact-info-item">
+              <span className="contact-label">Studio</span>
+              <p>
+                New York,<br />
+                working everywhere.
+              </p>
+            </div>
+            <div className="contact-info-item">
+              <span className="contact-label">Availability</span>
+              <p>
+                Taking on two new<br />
+                rooms this fall.
+              </p>
+            </div>
           </div>
         </div>
 
