@@ -3,6 +3,9 @@ import heroLead from '@assets/Image_7_1787435406771.jpeg';
 import projectOne from '@assets/Unknown_1787438547314.png';
 import projectTwo from '@assets/Unknown1_1787438547314.png';
 import projectThree from '@assets/Unknown2_1787438547314.png';
+import projectFour from '@assets/image_1787495321878.png';
+import projectFive from '@assets/image_1787495413455.png';
+import projectSix from '@assets/image_1787495063895.png';
 import serviceDesign from '@assets/image_1787440461289.png';
 import serviceDevelopment from '@assets/image_1787441232956.png';
 import serviceIntegration from '@assets/image_1787440676159.png';
@@ -49,184 +52,257 @@ export default function Home() {
   const [activeService, setActiveService] = useState(0);
 
   return (
-    <main className="reference-page">
-      <div className="reference-frame">
-        <nav className="reference-nav" aria-label="Main navigation">
-          <a className="reference-studio" href="#top">Studio 1801</a>
+    <main className="reference-page" data-testid="page-home">
+      <div className="reference-frame" data-testid="frame-hero">
+        <nav className="reference-nav" aria-label="Main navigation" data-testid="nav-main">
+          <a className="reference-studio" href="#top" data-testid="link-studio-home">Studio 1801</a>
           <div className="reference-nav-links">
-            <a href="#work">Work</a>
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
+            <a href="#work" data-testid="link-nav-work">Work</a>
+            <a href="#services" data-testid="link-nav-services">Services</a>
+            <a href="#process" data-testid="link-nav-process">Process</a>
           </div>
-          <a className="reference-project-link" href="mailto:hello@studio1801.com">
+          <a className="reference-project-link" href="mailto:hello@studio1801.com" data-testid="link-nav-contact">
             Start a Project <span aria-hidden="true">→</span>
           </a>
         </nav>
 
-        <div className="reference-meta" aria-hidden="true">
+        <div className="reference-meta" aria-hidden="true" data-testid="hero-meta">
           <span>Studio 1801</span>
           <span>Independent web studio</span>
           <span>01</span>
           <span>Web design</span>
         </div>
 
-        <section id="services" className="reference-left">
-          <h1>
-            See Your New
-            <br />
-            Website.
-            <br />
-            Before You Pay.
-          </h1>
-          <p className="reference-description">
-            7 Ways Your Website Is Losing Customers. We&apos;ll Show You Exactly How
-            We&apos;d Fix Them.
-          </p>
-          <ul className="hero-checks" aria-label="What is included">
-            <li>
-              <span aria-hidden="true">✓</span>
-              Custom restaurant homepage
-            </li>
-            <li>
-              <span aria-hidden="true">✓</span>
-              Live in 48 hours
-            </li>
-            <li>
-              <span aria-hidden="true">✓</span>
-              7 revenue leaks identified
-            </li>
-            <li className="hero-check-emphasis">
-              <span aria-hidden="true">✓</span>
-              Keep it. No risk.
-            </li>
-          </ul>
-          <div className="hero-actions">
-            <a className="hero-cta" href="mailto:hello@studio1801.com?subject=Claim%20my%20Free%20Offer">
-              Claim your Free Offer <span aria-hidden="true">→</span>
-            </a>
-            <a className="hero-secondary-cta" href="mailto:hello@studio1801.com?subject=Contact%20Studio%201801">
-              Contact us <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <a className="hero-work-link" href="#work">
-            <span aria-hidden="true">•</span>
-            Build your website before you spend a dollar
-          </a>
-        </section>
-
-        <footer className="reference-footer">
-          <div className="reference-locations">
-            <span>Based in New York</span>
-            <span>Working everywhere</span>
-          </div>
-          <strong>Studio 1801</strong>
-        </footer>
-
-        <section className="reference-right">
-          <div className="reference-work-copy">
-            <h2>
-              Make a better first
+        <div className="hero-content">
+          <section id="services" className="reference-left" data-testid="section-hero-left">
+            <h1 data-testid="text-hero-title">
+              See Your New
               <br />
-              impression.
-            </h2>
-            <p>
-              A clear, considered website that gives your
+              Website.
               <br />
-              best work the attention it deserves.
+              Before You Pay.
+            </h1>
+            <p className="reference-description" data-testid="text-hero-desc">
+              7 Ways Your Website Is Losing Customers. We'll Show You Exactly How
+              We'd Fix Them.
             </p>
-            <a href="#work">Explore the work <span aria-hidden="true">→</span></a>
-          </div>
-          <div className="reference-image">
-            <img src={heroLead} alt="Soft-focus flowers against a blue sky" />
-          </div>
-        </section>
+            <ul className="hero-checks" aria-label="What is included" data-testid="list-hero-checks">
+              <li>Custom restaurant homepage</li>
+              <li>Live in 48 hours</li>
+              <li>7 revenue leaks identified</li>
+              <li className="hero-check-emphasis">Keep it. No risk.</li>
+            </ul>
+            <div className="hero-actions">
+              <a className="hero-cta" href="mailto:hello@studio1801.com?subject=Claim%20my%20Free%20Offer" data-testid="button-claim-offer">
+                Claim your Free Offer <span aria-hidden="true">→</span>
+              </a>
+              <a className="hero-secondary-cta" href="mailto:hello@studio1801.com?subject=Contact%20Studio%201801" data-testid="button-contact">
+                Contact us <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <a className="hero-work-link" href="mailto:hello@studio1801.com?subject=Claim%20my%20Free%20Personalized%20Review" data-testid="link-hero-work">
+              <span aria-hidden="true">•</span> The work you can't unsee. Generate more traffic and bookings with your free personalized review.
+            </a>
+          </section>
 
-        <span className="reference-scroll" aria-hidden="true">
-          scroll <span>∨</span>
-        </span>
+          <section className="reference-right" data-testid="section-hero-right">
+            <div className="reference-image" data-testid="img-hero-lead-container">
+              <img src={heroLead} alt="Soft-focus flowers against a blue sky" data-testid="img-hero-lead" />
+            </div>
+            <div className="reference-work-copy">
+              <h2 data-testid="text-hero-secondary-title">
+                Make a better first impression.
+              </h2>
+              <p data-testid="text-hero-secondary-desc">
+                A clear, considered website that gives your best work the attention it deserves.
+              </p>
+              <a href="#work" data-testid="link-hero-explore">Explore the work <span aria-hidden="true">→</span></a>
+            </div>
+          </section>
+        </div>
+
+        <footer className="reference-footer" data-testid="footer-hero">
+          <div className="reference-locations">
+            <span data-testid="text-footer-location-1">Based in New York</span>
+            <span data-testid="text-footer-location-2">Working everywhere</span>
+          </div>
+          <strong data-testid="text-footer-brand">Studio 1801</strong>
+        </footer>
       </div>
 
-      <section id="about" className="reference-about">
-        <p className="about-statement">
-          Studio 1801 ®, a design studio
-          <br className="about-desktop-break" />
-          working at the intersection of brand,
-          <br className="about-desktop-break" />
-          product, and technology. Designing
-          <br className="about-desktop-break" />
-          brands and digital products that move
-          <br className="about-desktop-break" />
-          businesses forward.
-        </p>
-        <a className="about-cta" href="mailto:hello@studio1801.com">
-          <span aria-hidden="true">•</span>
-          Let&apos;s chat
-        </a>
+      <section id="about" className="reference-about" data-testid="section-about">
+        <div className="about-layout">
+          <div className="about-kicker" data-testid="text-about-kicker">
+            Who we are
+          </div>
+          <div className="about-main">
+            <h2 className="about-statement" data-testid="text-about-statement">
+              Studio 1801 ® — a design studio working at the intersection of brand, product, and technology. Designing brands and digital products that move businesses forward.
+            </h2>
+            <div className="about-columns">
+              <p>We are designers, thinkers, and problem-solvers. We believe digital hospitality should solve real problems, simplify the guest journey, and create impact.</p>
+              <p>With a strong foundation in restaurant identity, UI/UX, and digital strategy, we craft web experiences that feel intuitive, look exceptional, and drive measurable growth.</p>
+            </div>
+            <a className="about-cta" href="mailto:hello@studio1801.com" data-testid="link-about-chat">
+              Learn about our process
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section id="work" className="reference-work">
-        <div className="work-meta" aria-hidden="true">
+      <section id="work" className="reference-work" data-testid="section-work">
+        <div className="work-meta" aria-hidden="true" data-testid="work-meta">
           <span>Selected works</span>
           <span>Food and beverage</span>
-          <span>03</span>
+          <span>06</span>
           <span>2024 / 25</span>
         </div>
         <div className="work-intro">
-          <h2>Selected works</h2>
-          <p className="work-summary">
+          <h2 data-testid="text-work-title">Selected works</h2>
+          <p className="work-summary" data-testid="text-work-desc">
             Digital identities and spaces for places worth remembering.
           </p>
         </div>
 
-        <div className="work-grid">
-          <article className="work-card work-card-tall">
+        <div className="work-grid" data-testid="grid-work-projects">
+          <article className="work-card work-card-tall" data-testid="card-project-1">
             <div className="work-card-image">
-              <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" />
-              <span className="work-card-arrow" aria-hidden="true">↗</span>
+              <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" data-testid="img-project-1" />
             </div>
             <div className="work-card-meta">
-              <h3>After Hours</h3>
-              <p>Restaurant identity <span>·</span> Digital</p>
+              <h3 data-testid="text-project-1-title">After Hours</h3>
+              <p data-testid="text-project-1-desc">Restaurant identity <span>·</span> Digital</p>
             </div>
           </article>
-          <article className="work-card">
+          <article className="work-card" data-testid="card-project-2">
             <div className="work-card-image">
-              <img src={projectTwo} alt="People sharing dim sum at a restaurant table" />
-              <span className="work-card-arrow" aria-hidden="true">↗</span>
+              <img src={projectTwo} alt="People sharing dim sum at a restaurant table" data-testid="img-project-2" />
             </div>
             <div className="work-card-meta">
-              <h3>Common Table</h3>
-              <p>Hospitality <span>·</span> Art direction</p>
+              <h3 data-testid="text-project-2-title">Common Table</h3>
+              <p data-testid="text-project-2-desc">Hospitality <span>·</span> Art direction</p>
             </div>
           </article>
-          <article className="work-card">
+          <article className="work-card" data-testid="card-project-3">
             <div className="work-card-image">
-              <img src={projectThree} alt="A Japanese-inspired meal served on a tray" />
-              <span className="work-card-arrow" aria-hidden="true">↗</span>
+              <img src={projectThree} alt="A Japanese-inspired meal served on a tray" data-testid="img-project-3" />
             </div>
             <div className="work-card-meta">
-              <h3>Field Notes</h3>
-              <p>Food studio <span>·</span> Web experience</p>
+              <h3 data-testid="text-project-3-title">Field Notes</h3>
+              <p data-testid="text-project-3-desc">Food studio <span>·</span> Web experience</p>
+            </div>
+          </article>
+          <article className="work-card" data-testid="card-project-4">
+            <div className="work-card-image">
+              <img src={projectFour} alt="Bakers arranging rows of fresh croissants on a tray" data-testid="img-project-4" />
+            </div>
+            <div className="work-card-meta">
+              <h3 data-testid="text-project-4-title">The Flour Room</h3>
+              <p data-testid="text-project-4-desc">Bakery identity <span>·</span> Digital</p>
+            </div>
+          </article>
+          <article className="work-card" data-testid="card-project-5">
+            <div className="work-card-image">
+              <img src={projectFive} alt="A Thai restaurant table filled with colorful shared dishes" data-testid="img-project-5" />
+            </div>
+            <div className="work-card-meta">
+              <h3 data-testid="text-project-5-title">Market Table</h3>
+              <p data-testid="text-project-5-desc">Restaurant identity <span>·</span> Digital</p>
+            </div>
+          </article>
+          <article className="work-card" data-testid="card-project-6">
+            <div className="work-card-image">
+              <img src={projectSix} alt="Coffee and a pastry on a warm wooden cafe table" data-testid="img-project-6" />
+            </div>
+            <div className="work-card-meta">
+              <h3 data-testid="text-project-6-title">First Light</h3>
+              <p data-testid="text-project-6-desc">Café identity <span>·</span> Digital</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="what-we-do" className="reference-services">
+      <section id="strategy" className="reference-strategy" data-testid="section-strategy">
+        <div className="strategy-meta" aria-hidden="true">
+          <span>Studio diagnosis</span>
+          <span>Revenue leaks</span>
+          <span>04</span>
+          <span>Analysis</span>
+        </div>
+
+        <div className="strategy-grid">
+          <div className="strategy-lead">
+            <h2 data-testid="text-strategy-title">The cost of an overlooked website.</h2>
+            <p className="strategy-subtitle" data-testid="text-strategy-subtitle">
+              Your dining room is full on Saturday, but how many covers did you lose on Tuesday because your digital front door was locked? An outdated website is not just a missed introduction. It is a quiet, continuous leak in revenue.
+            </p>
+            <div className="strategy-image-container" data-testid="img-strategy-container">
+              <img src={processThree} alt="Architectural representation of website structure" data-testid="img-strategy" />
+            </div>
+          </div>
+          
+          <div className="strategy-editorial">
+            <div className="strategy-outcome" data-testid="strategy-outcome">
+              <span>Revenue lift</span>
+              <div className="strategy-outcome-content">
+                <strong>
+                  More direct bookings.<br />
+                  Less revenue left behind.
+                </strong>
+                <p>A clearer digital front door turns more visits into action before a third-party marketplace takes the margin.</p>
+              </div>
+            </div>
+            <article className="strategy-article" data-testid="article-strategy-1">
+              <span className="strategy-number" aria-hidden="true">01</span>
+              <div>
+                <h3 data-testid="text-strategy-1-title">The Vibe Disconnect</h3>
+                <p data-testid="text-strategy-1-desc">Your food is exceptional, your lighting is deliberate, and your service is warm. But your website looks like a generic template. Guests eat with their eyes first. If the digital mood does not match the physical room, they will book elsewhere.</p>
+              </div>
+            </article>
+            <article className="strategy-article" data-testid="article-strategy-2">
+              <span className="strategy-number" aria-hidden="true">02</span>
+              <div>
+                <h3 data-testid="text-strategy-2-title">The Booking Friction</h3>
+                <p data-testid="text-strategy-2-desc">Every extra click between a hungry guest and a confirmed reservation is a liability. Buried links, clunky third-party widgets, and non-mobile-friendly menus create friction that silently drives away revenue night after night.</p>
+              </div>
+            </article>
+            <article className="strategy-article" data-testid="article-strategy-3">
+              <span className="strategy-number" aria-hidden="true">03</span>
+              <div>
+                <h3 data-testid="text-strategy-3-title">The Invisible Menu</h3>
+                <p data-testid="text-strategy-3-desc">PDF menus might be easy to upload, but they are invisible to search engines and frustrating for guests on mobile devices. If locals can't easily read what you serve, they will choose the neighborhood spot where they can.</p>
+              </div>
+            </article>
+            <article className="strategy-article" data-testid="article-strategy-4">
+              <span className="strategy-number" aria-hidden="true">04</span>
+              <div>
+                <h3 data-testid="text-strategy-4-title">The Missing Narrative</h3>
+                <p data-testid="text-strategy-4-desc">A list of dishes isn't a brand. Without a compelling story about your sourcing, your chef's background, or the space's history, you're competing purely on price rather than offering an experience worth crossing town for.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="what-we-do" className="reference-services" data-testid="section-services">
         <h2 className="sr-only">What we do</h2>
         <div className="services-layout">
           <div className="services-copy" aria-live="polite">
-            <p className="services-overview">
+            <p className="services-overview" data-testid="text-services-overview">
               We design and build restaurant websites that help more guests choose
               you, then make it easier to book, order, and come back.
             </p>
-            <div className="service-detail" key={activeService}>
-              <h3>{serviceOptions[activeService].label}</h3>
-              <p>{serviceOptions[activeService].description}</p>
+            <div className="service-detail" key={activeService} data-testid="container-service-detail">
+              <h3 data-testid="text-service-active-title">{serviceOptions[activeService].label}</h3>
+              <p data-testid="text-service-active-desc">{serviceOptions[activeService].description}</p>
             </div>
           </div>
 
-          <nav className="services-list" aria-label="What we do">
+          <div className="services-image" data-testid="img-service-active-container">
+            <img src={serviceOptions[activeService].image} alt={serviceOptions[activeService].alt} data-testid="img-service-active" />
+          </div>
+
+          <nav className="services-list" aria-label="What we do" data-testid="nav-services">
             {serviceOptions.map((service, index) => (
               <button
                 className={`service-item ${activeService === index ? 'service-item-active' : ''}`}
@@ -234,36 +310,33 @@ export default function Home() {
                 type="button"
                 aria-pressed={activeService === index}
                 onClick={() => setActiveService(index)}
+                data-testid={`button-service-${index}`}
               >
                 <span>{service.label}</span>
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true">→</span>
               </button>
             ))}
           </nav>
-
-          <div className="services-image">
-            <img src={serviceOptions[activeService].image} alt={serviceOptions[activeService].alt} />
-          </div>
         </div>
 
-        <div className="services-proof" aria-label="Studio 1801 guarantees">
-          <div className="proof-item">
+        <div className="services-proof" aria-label="Studio 1801 guarantees" data-testid="services-proof">
+          <div className="proof-item" data-testid="proof-item-1">
             <strong>7 day</strong>
             <span>guarantee delivery</span>
           </div>
-          <div className="proof-item">
+          <div className="proof-item" data-testid="proof-item-2">
             <strong>95%</strong>
             <span>satisfaction rate</span>
           </div>
-          <div className="proof-item">
+          <div className="proof-item" data-testid="proof-item-3">
             <strong>Unlimited</strong>
             <span>revisions</span>
           </div>
         </div>
       </section>
 
-      <section id="process" className="reference-process">
-        <div className="process-meta" aria-hidden="true">
+      <section id="process" className="reference-process" data-testid="section-process">
+        <div className="process-meta" aria-hidden="true" data-testid="process-meta">
           <span>How we work</span>
           <span>From first idea to launch</span>
           <span>Studio 1801</span>
@@ -271,14 +344,14 @@ export default function Home() {
         </div>
 
         <div className="process-intro">
-          <h2>Design process</h2>
-          <p>
+          <h2 data-testid="text-process-title">Design process</h2>
+          <p data-testid="text-process-desc">
             Thoughtful work for restaurants that want to be chosen, remembered,
             and visited again.
           </p>
         </div>
 
-        <div className="process-steps">
+        <div className="process-steps" data-testid="grid-process-steps">
           {[
             {
               duration: '2–3 days',
@@ -323,25 +396,57 @@ export default function Home() {
               alt: 'Person looking up beneath a curved sky and checkerboard floor',
             },
           ].map((step, index) => (
-            <article className={`process-step process-step-${index + 1}`} key={step.title}>
-              <span className="process-duration">{step.duration}</span>
+            <article className={`process-step process-step-${index + 1}`} key={step.title} data-testid={`article-process-${index + 1}`}>
+              <span className="process-duration" data-testid={`text-process-${index + 1}-duration`}>{step.duration}</span>
               <div className="process-step-image">
-                <img src={step.image} alt={step.alt} />
+                <img src={step.image} alt={step.alt} data-testid={`img-process-${index + 1}`} />
               </div>
               <div className="process-step-copy">
-                <h3>{step.title}</h3>
-                <p>{step.copy}</p>
+                <h3 data-testid={`text-process-${index + 1}-title`}>{step.title}</h3>
+                <p data-testid={`text-process-${index + 1}-desc`}>{step.copy}</p>
               </div>
             </article>
           ))}
         </div>
 
-        <div className="process-philosophy">
-          <h3>A good website should feel like the first warm welcome.</h3>
-          <p>
+        <div className="process-philosophy" data-testid="process-philosophy">
+          <h3 data-testid="text-philosophy-title">A good website should feel like the first warm welcome.</h3>
+          <p data-testid="text-philosophy-desc">
             Clear enough to guide a guest, distinctive enough to stay with them,
             and useful enough to bring them back.
           </p>
+        </div>
+      </section>
+
+      <section id="contact" className="reference-contact" data-testid="section-contact">
+        <div className="contact-meta" aria-hidden="true" data-testid="contact-meta">
+          <span>Studio 1801</span>
+          <span>New York / Worldwide</span>
+          <span>07</span>
+          <span>Contact</span>
+        </div>
+
+        <div className="contact-content">
+          <div className="contact-editorial">
+            <h2 data-testid="text-contact-title">
+              The table is set.<br />
+              Let's build something<br />
+              worth remembering.
+            </h2>
+            <a href="mailto:hello@studio1801.com" className="contact-email" data-testid="link-contact-email">
+              hello@studio1801.com <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-footer" data-testid="footer-contact">
+          <div className="contact-locations" data-testid="contact-locations">
+            <span>Based in New York</span>
+            <span>Working everywhere</span>
+          </div>
+          <div className="contact-signoff" data-testid="text-contact-signoff">
+            Studio 1801
+          </div>
         </div>
       </section>
     </main>
