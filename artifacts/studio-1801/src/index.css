@@ -696,6 +696,85 @@
 .strategy-description p:last-child {
   margin-bottom: 0;
 }
+.strategy-visuals {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 24px;
+  margin-top: 6vw;
+}
+.strategy-visual {
+  margin: 0;
+}
+.strategy-visual img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 14px;
+}
+.strategy-visual-wide img {
+  aspect-ratio: 1.6;
+}
+.strategy-visual-tall img {
+  aspect-ratio: 1.03;
+}
+.strategy-visual figcaption {
+  font-size: 11px;
+  color: var(--gray-text);
+  margin-top: 12px;
+}
+.strategy-math {
+  margin-top: 6vw;
+}
+.strategy-math-intro {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 470px;
+  margin: 0 0 44px;
+}
+.strategy-math-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 24px;
+  align-items: baseline;
+  padding: 22px 0;
+}
+.strategy-math-row h3 {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.strategy-math-row p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--gray-text);
+  margin: 0;
+  max-width: 400px;
+}
+.strategy-math-row strong,
+.strategy-math-total strong {
+  font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  text-align: right;
+  white-space: nowrap;
+}
+.strategy-math-total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: baseline;
+  margin-top: 28px;
+  padding-top: 28px;
+}
+.strategy-math-total p {
+  font-size: 14px;
+  margin: 0;
+}
+.strategy-math-total strong {
+  font-size: 40px;
+}
 
 /* SERVICES */
 .reference-services {
@@ -1083,6 +1162,34 @@
     gap: 2rem;
     margin-bottom: 3.75rem;
   }
+  .strategy-visual figcaption {
+    font-size: 0.69rem;
+    margin-top: 0.75rem;
+  }
+  .strategy-visuals {
+    gap: 1.5rem;
+  }
+  .strategy-math-intro,
+  .strategy-math-total p {
+    font-size: 0.875rem;
+  }
+  .strategy-math-intro {
+    max-width: 29.4rem;
+    margin-bottom: 2.75rem;
+  }
+  .strategy-math-row h3 {
+    font-size: 0.94rem;
+  }
+  .strategy-math-row p {
+    font-size: 0.81rem;
+    max-width: 25rem;
+  }
+  .strategy-math-row strong {
+    font-size: 1.5rem;
+  }
+  .strategy-math-total strong {
+    font-size: 2.5rem;
+  }
   .reference-services {
     padding: 13vw 6vw 2.5vw;
   }
@@ -1177,6 +1284,9 @@
   .work-card-image,
   .services-image,
   .process-step-image {
+    border-radius: 0.875rem;
+  }
+  .strategy-visual img {
     border-radius: 0.875rem;
   }
 }
@@ -1277,6 +1387,26 @@
   }
   .strategy-arrow {
     margin-bottom: 24px;
+  }
+  .strategy-visuals {
+    grid-template-columns: 1fr;
+    margin-top: 48px;
+  }
+  .strategy-math {
+    margin-top: 48px;
+  }
+  .strategy-math-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px 0;
+  }
+  .strategy-math-row strong,
+  .strategy-math-total strong {
+    text-align: left;
+  }
+  .strategy-math-total {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   /* Services Mobile */

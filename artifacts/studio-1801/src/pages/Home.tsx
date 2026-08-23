@@ -16,6 +16,8 @@ import processThree from '@assets/image_1787442170090.png';
 import processFour from '@assets/image_1787442266936.png';
 import processFive from '@assets/image_1787442378754.png';
 import processSix from '@assets/image_1787442428529.png';
+import strategyRoom from '@assets/image_1787508416188.png';
+import strategyStreet from '@assets/image_1787508483431.png';
 
 const serviceOptions = [
   {
@@ -264,6 +266,51 @@ export default function Home() {
                 takes the margin.
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="strategy-visuals">
+          <figure className="strategy-visual strategy-visual-wide" data-testid="img-strategy-room">
+            <img src={strategyRoom} alt="A full dining room in motion on a busy evening" />
+            <figcaption>Saturday, 8:10 pm. The room sells itself.</figcaption>
+          </figure>
+          <figure className="strategy-visual strategy-visual-tall" data-testid="img-strategy-street">
+            <img src={strategyStreet} alt="A dropped takeaway cup on the pavement as someone walks past" />
+            <figcaption>Tuesday, noon. The guests who walked past.</figcaption>
+          </figure>
+        </div>
+
+        <div className="strategy-math" data-testid="strategy-math">
+          <span className="strategy-label">The math</span>
+          <p className="strategy-math-intro">
+            Priced against a typical 80-seat dining room with a $42 average
+            check, here is what each leak quietly walks out with.
+          </p>
+          <div className="strategy-math-rows">
+            <div className="strategy-math-row" data-testid="row-leak-1">
+              <h3>The vibe disconnect</h3>
+              <p>Six covers a week choose the room that looks like it cares.</p>
+              <strong>&minus;$13,100 a year</strong>
+            </div>
+            <div className="strategy-math-row" data-testid="row-leak-2">
+              <h3>The booking friction</h3>
+              <p>Four reservations a week abandoned between hungry and confirmed.</p>
+              <strong>&minus;$8,700 a year</strong>
+            </div>
+            <div className="strategy-math-row" data-testid="row-leak-3">
+              <h3>The invisible menu</h3>
+              <p>Three covers a week lost in searches your PDF never appears in.</p>
+              <strong>&minus;$6,500 a year</strong>
+            </div>
+            <div className="strategy-math-row" data-testid="row-leak-4">
+              <h3>The missing narrative</h3>
+              <p>Two covers a week that price-shop instead of crossing town.</p>
+              <strong>&minus;$4,400 a year</strong>
+            </div>
+          </div>
+          <div className="strategy-math-total" data-testid="row-leak-total">
+            <p>Left on the table, every year</p>
+            <strong>&asymp; $32,700</strong>
           </div>
         </div>
       </section>
