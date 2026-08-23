@@ -130,10 +130,11 @@
 
 .reference-left h1 {
   max-width: 370px;
-  font-size: clamp(48px, 7vh, 62px);
-  font-weight: 600;
-  line-height: 0.84;
-  letter-spacing: -0.085em;
+  font-size: clamp(47px, 6.6vh, 60px);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
 }
 
 .reference-description {
@@ -142,8 +143,8 @@
   color: #5e5b56;
   font-family: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(10px, 1.7vh, 15px);
-  font-weight: 500;
-  line-height: 1.45;
+  font-weight: 400;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
@@ -221,16 +222,18 @@
 }
 
 .hero-cta {
-  border: 1px solid #c7643b;
-  background: #c7643b;
-  color: #fffaf3;
+  border: 0;
+  border-radius: 999px;
+  background: #181816;
+  color: #f3f1eb;
+  box-shadow: none;
 }
 
 .hero-cta:hover {
-  border-color: #181816;
   background: #181816;
   box-shadow: none;
-  transform: translateY(-1px);
+  opacity: 0.82;
+  transform: translateY(-2px);
 }
 
 .hero-cta span,
@@ -243,6 +246,7 @@
   padding-right: 13px;
   padding-left: 15px;
   border: 1px solid rgb(24 24 22 / 24%);
+  border-radius: 999px;
   color: #181816;
   font-weight: 400;
   white-space: nowrap;
@@ -288,8 +292,9 @@
 }
 
 .reference-right h2 {
-  font-size: clamp(33px, 4.2vh, 37px);
-  line-height: 0.9;
+  font-size: clamp(28px, 3.5vh, 32px);
+  font-weight: 600;
+  line-height: 0.95;
 }
 
 .reference-work-copy p {
@@ -1013,7 +1018,7 @@
   }
 
   .reference-right h2 {
-    font-size: clamp(35px, 10vw, 46px);
+    font-size: clamp(30px, 8vw, 38px);
   }
 
   .reference-work-copy p,
