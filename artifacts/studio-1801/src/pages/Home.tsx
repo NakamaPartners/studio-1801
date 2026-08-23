@@ -155,8 +155,7 @@ export default function Home() {
         <div className="work-meta" aria-hidden="true" data-testid="work-meta">
           <span>Selected works</span>
           <span>Food and beverage</span>
-          <span>06</span>
-          <span>2024 / 25</span>
+          <span>03</span>
         </div>
         <div className="work-intro">
           <h2 data-testid="text-work-title">Selected works</h2>
@@ -342,7 +341,7 @@ export default function Home() {
           <span>How we work</span>
           <span>From first idea to launch</span>
           <span>Studio 1801</span>
-          <span>01 / 06</span>
+          <span>06</span>
         </div>
 
         <div className="process-intro">
