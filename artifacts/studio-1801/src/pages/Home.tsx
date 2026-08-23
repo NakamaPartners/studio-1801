@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import heroLead from '@assets/Image_7_1787435406771.jpeg';
-import projectOne from '@assets/Unknown_1787438547314.png';
+import projectOne from '@assets/Unknown_1787504780455.png';
 import projectTwo from '@assets/Unknown1_1787438547314.png';
 import projectThree from '@assets/Unknown2_1787438547314.png';
 import projectFour from '@assets/image_1787495321878.png';
@@ -75,10 +75,9 @@ export default function Home() {
 
         <div className="hero-content">
           <section id="services" className="reference-left" data-testid="section-hero-left">
+            <span className="hero-eyebrow" data-testid="text-hero-eyebrow">The work you can't unsee</span>
             <h1 data-testid="text-hero-title">
-              See Your New
-              <br />
-              Website.
+              See Your New Website.
               <br />
               Before You Pay.
             </h1>
@@ -132,6 +131,7 @@ export default function Home() {
       </div>
 
       <section id="about" className="reference-about" data-testid="section-about">
+        <span className="about-label" data-testid="text-about-label">( Studio 1801 ® )</span>
         <p className="about-statement" data-testid="text-about-statement">
           Studio 1801 ®, a design studio
           <br className="about-desktop-break" />
@@ -164,7 +164,7 @@ export default function Home() {
         </div>
 
         <div className="work-grid" data-testid="grid-work-projects">
-          <article className="work-card work-card-tall" data-testid="card-project-1">
+          <article className="work-card" data-testid="card-project-1">
             <div className="work-card-image">
               <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" data-testid="img-project-1" />
             </div>
@@ -222,63 +222,48 @@ export default function Home() {
       </section>
 
       <section id="strategy" className="reference-strategy" data-testid="section-strategy">
-        <div className="strategy-meta" aria-hidden="true">
-          <span>Studio diagnosis</span>
-          <span>Revenue leaks</span>
-          <span>04</span>
-          <span>Analysis</span>
-        </div>
-
         <div className="strategy-grid">
           <div className="strategy-lead">
+            <span className="strategy-arrow" aria-hidden="true">&#8600;</span>
             <h2 data-testid="text-strategy-title">The cost of an overlooked website.</h2>
-            <p className="strategy-subtitle" data-testid="text-strategy-subtitle">
-              Your dining room is full on Saturday, but how many covers did you lose on Tuesday because your digital front door was locked? An outdated website is not just a missed introduction. It is a quiet, continuous leak in revenue.
-            </p>
-            <div className="strategy-image-container" data-testid="img-strategy-container">
-              <img src={processThree} alt="Architectural representation of website structure" data-testid="img-strategy" />
-            </div>
           </div>
-          
-          <div className="strategy-editorial">
-            <div className="strategy-outcome" data-testid="strategy-outcome">
-              <span>Revenue lift</span>
-              <div className="strategy-outcome-content">
-                <strong>
+
+          <div className="strategy-details">
+            <div className="strategy-facts">
+              <div className="strategy-fact" data-testid="strategy-fact-diagnosis">
+                <span className="strategy-label">Diagnosis</span>
+                <p>Revenue leaks</p>
+                <span className="strategy-label">Outcome</span>
+                <p>
                   More direct bookings.<br />
                   Less revenue left behind.
-                </strong>
-                <p>A clearer digital front door turns more visits into action before a third-party marketplace takes the margin.</p>
+                </p>
+              </div>
+              <div className="strategy-fact" data-testid="strategy-fact-leaks">
+                <span className="strategy-label">The leaks</span>
+                <p>
+                  The vibe disconnect<br />
+                  The booking friction<br />
+                  The invisible menu<br />
+                  The missing narrative
+                </p>
               </div>
             </div>
-            <article className="strategy-article" data-testid="article-strategy-1">
-              <span className="strategy-number" aria-hidden="true">01</span>
-              <div>
-                <h3 data-testid="text-strategy-1-title">The Vibe Disconnect</h3>
-                <p data-testid="text-strategy-1-desc">Your food is exceptional, your lighting is deliberate, and your service is warm. But your website looks like a generic template. Guests eat with their eyes first. If the digital mood does not match the physical room, they will book elsewhere.</p>
-              </div>
-            </article>
-            <article className="strategy-article" data-testid="article-strategy-2">
-              <span className="strategy-number" aria-hidden="true">02</span>
-              <div>
-                <h3 data-testid="text-strategy-2-title">The Booking Friction</h3>
-                <p data-testid="text-strategy-2-desc">Every extra click between a hungry guest and a confirmed reservation is a liability. Buried links, clunky third-party widgets, and non-mobile-friendly menus create friction that silently drives away revenue night after night.</p>
-              </div>
-            </article>
-            <article className="strategy-article" data-testid="article-strategy-3">
-              <span className="strategy-number" aria-hidden="true">03</span>
-              <div>
-                <h3 data-testid="text-strategy-3-title">The Invisible Menu</h3>
-                <p data-testid="text-strategy-3-desc">PDF menus might be easy to upload, but they are invisible to search engines and frustrating for guests on mobile devices. If locals can't easily read what you serve, they will choose the neighborhood spot where they can.</p>
-              </div>
-            </article>
-            <article className="strategy-article" data-testid="article-strategy-4">
-              <span className="strategy-number" aria-hidden="true">04</span>
-              <div>
-                <h3 data-testid="text-strategy-4-title">The Missing Narrative</h3>
-                <p data-testid="text-strategy-4-desc">A list of dishes isn't a brand. Without a compelling story about your sourcing, your chef's background, or the space's history, you're competing purely on price rather than offering an experience worth crossing town for.</p>
-              </div>
-            </article>
+
+            <div className="strategy-description" data-testid="strategy-description">
+              <span className="strategy-label">Description</span>
+              <p>
+                Your dining room is full on Saturday, but how many covers did you
+                lose on Tuesday because your digital front door was locked? An
+                outdated website is not just a missed introduction. It is a quiet,
+                continuous leak in revenue.
+              </p>
+              <p>
+                Guests eat with their eyes first. A clearer digital front door
+                turns more visits into action before a third-party marketplace
+                takes the margin.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -286,16 +271,11 @@ export default function Home() {
       <section id="what-we-do" className="reference-services" data-testid="section-services">
         <h2 className="sr-only">What we do</h2>
         <div className="services-layout">
-          <div className="services-copy" aria-live="polite">
+          <div className="services-copy">
             <p className="services-overview" data-testid="text-services-overview">
               We design and build restaurant websites that help more guests choose
               you, then make it easier to book, order, and come back.
             </p>
-            <div className="service-detail" key={activeService} data-testid="container-service-detail">
-              <span className="service-detail-number" aria-hidden="true">{serviceOptions[activeService].number}</span>
-              <h3 data-testid="text-service-active-title">{serviceOptions[activeService].label}</h3>
-              <p data-testid="text-service-active-desc">{serviceOptions[activeService].description}</p>
-            </div>
           </div>
 
           <div className="services-image" data-testid="img-service-active-container">
@@ -313,7 +293,7 @@ export default function Home() {
                 data-testid={`button-service-${index}`}
               >
                 <span>{service.label}</span>
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">↗</span>
               </button>
             ))}
           </nav>

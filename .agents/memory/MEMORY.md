@@ -1,0 +1,1 @@
+- [Studio 1801 style rules](studio-1801-style-rules.md) — house rules (sentence case, 14px rounded images, editorial layout) override details in user reference screenshots.
