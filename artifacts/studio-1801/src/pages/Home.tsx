@@ -101,14 +101,11 @@ export default function Home() {
               </a>
             </div>
             <a className="hero-work-link" href="mailto:hello@studio1801.com?subject=Claim%20my%20Free%20Personalized%20Review" data-testid="link-hero-work">
-              <span aria-hidden="true">•</span> The work you can't unsee. Generate more traffic and bookings with your free personalized review.
+              <span aria-hidden="true">•</span> Build your website before you spend a dollar
             </a>
           </section>
 
           <section className="reference-right" data-testid="section-hero-right">
-            <div className="reference-image" data-testid="img-hero-lead-container">
-              <img src={heroLead} alt="Soft-focus flowers against a blue sky" data-testid="img-hero-lead" />
-            </div>
             <div className="reference-work-copy">
               <h2 data-testid="text-hero-secondary-title">
                 Make a better first impression.
@@ -117,6 +114,9 @@ export default function Home() {
                 A clear, considered website that gives your best work the attention it deserves.
               </p>
               <a href="#work" data-testid="link-hero-explore">Explore the work <span aria-hidden="true">→</span></a>
+            </div>
+            <div className="reference-image" data-testid="img-hero-lead-container">
+              <img src={heroLead} alt="Soft-focus flowers against a blue sky" data-testid="img-hero-lead" />
             </div>
           </section>
         </div>
@@ -127,27 +127,26 @@ export default function Home() {
             <span data-testid="text-footer-location-2">Working everywhere</span>
           </div>
           <strong data-testid="text-footer-brand">Studio 1801</strong>
+          <span className="reference-scroll" aria-hidden="true">scroll ↓</span>
         </footer>
       </div>
 
       <section id="about" className="reference-about" data-testid="section-about">
-        <div className="about-layout">
-          <div className="about-kicker" data-testid="text-about-kicker">
-            Who we are
-          </div>
-          <div className="about-main">
-            <h2 className="about-statement" data-testid="text-about-statement">
-              Studio 1801 ® — a design studio working at the intersection of brand, product, and technology. Designing brands and digital products that move businesses forward.
-            </h2>
-            <div className="about-columns">
-              <p>We are designers, thinkers, and problem-solvers. We believe digital hospitality should solve real problems, simplify the guest journey, and create impact.</p>
-              <p>With a strong foundation in restaurant identity, UI/UX, and digital strategy, we craft web experiences that feel intuitive, look exceptional, and drive measurable growth.</p>
-            </div>
-            <a className="about-cta" href="mailto:hello@studio1801.com" data-testid="link-about-chat">
-              Learn about our process
-            </a>
-          </div>
-        </div>
+        <p className="about-statement" data-testid="text-about-statement">
+          Studio 1801 ®, a design studio
+          <br className="about-desktop-break" />
+          working at the intersection of brand,
+          <br className="about-desktop-break" />
+          product, and technology. Designing
+          <br className="about-desktop-break" />
+          brands and digital products that move
+          <br className="about-desktop-break" />
+          businesses forward.
+        </p>
+        <a className="about-cta" href="mailto:hello@studio1801.com" data-testid="link-about-chat">
+          <span aria-hidden="true">•</span>
+          Let&apos;s chat
+        </a>
       </section>
 
       <section id="work" className="reference-work" data-testid="section-work">
@@ -293,6 +292,7 @@ export default function Home() {
               you, then make it easier to book, order, and come back.
             </p>
             <div className="service-detail" key={activeService} data-testid="container-service-detail">
+              <span className="service-detail-number" aria-hidden="true">{serviceOptions[activeService].number}</span>
               <h3 data-testid="text-service-active-title">{serviceOptions[activeService].label}</h3>
               <p data-testid="text-service-active-desc">{serviceOptions[activeService].description}</p>
             </div>
