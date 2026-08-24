@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { RouteComponentProps } from 'wouter';
 
 const previewSites: Record<string, { title: string; url: string }> = {
@@ -28,6 +29,7 @@ const previewSites: Record<string, { title: string; url: string }> = {
 };
 
 export default function PreviewPage({ params }: RouteComponentProps<{ slug: string }>) {
+  const [isMobile, setIsMobile] = useState(false);
   const site = previewSites[params.slug];
 
   if (!site) {
@@ -50,8 +52,28 @@ export default function PreviewPage({ params }: RouteComponentProps<{ slug: stri
       <header className="preview-header">
         <a className="preview-brand" href={`${import.meta.env.BASE_URL}`}>Studio 1801</a>
         <div className="preview-title">
-          <span>Live preview</span>
-          <strong>{site.title}</strong>
+          <div className="preview-title-line">
+            <span>Live preview</span>
+            <strong>{site.title}</strong>
+          </div>
+          <div className="preview-device-toggle" role="group" aria-label="Preview size">
+            <button
+              type="button"
+              className={!isMobile ? 'is-active' : ''}
+              aria-pressed={!isMobile}
+              onClick={() => setIsMobile(false)}
+            >
+              Desktop
+            </button>
+            <button
+              type="button"
+              className={isMobile ? 'is-active' : ''}
+              aria-pressed={isMobile}
+              onClick={() => setIsMobile(true)}
+            >
+              Mobile
+            </button>
+          </div>
         </div>
         <a className="preview-back" href={`${import.meta.env.BASE_URL}`}>← Back home</a>
       </header>
@@ -61,12 +83,14 @@ export default function PreviewPage({ params }: RouteComponentProps<{ slug: stri
           <span className="preview-address">{site.url.replace('https://', '')}</span>
           <span className="preview-open">↗</span>
         </div>
-        <iframe
-          src={site.url}
-          title={`${site.title} website preview`}
-          loading="eager"
-          referrerPolicy="strict-origin-when-cross-origin"
-        />
+        <div className={`preview-viewport${isMobile ? ' preview-viewport-mobile' : ''}`}>
+          <iframe
+            src={site.url}
+            title={`${site.title} website preview`}
+            loading="eager"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
       </section>
       <footer className="preview-footer">
         <span>Studio 1801 · Selected work</span>
