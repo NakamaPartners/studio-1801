@@ -492,7 +492,7 @@
   margin-bottom: 3.5vw;
 }
 .work-intro h2 {
-  font-size: clamp(48px, 6vw, 82px);
+  font-size: clamp(44px, 5vw, 70px);
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.05em;
@@ -1653,7 +1653,7 @@
   margin-bottom: 3.5vw;
 }
 .process-intro h2 {
-  font-size: clamp(46px, 6vw, 82px);
+  font-size: clamp(42px, 5vw, 70px);
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.05em;
@@ -1898,10 +1898,10 @@
   }
   .work-intro h2,
   .process-intro h2 {
-    font-size: 5.4rem;
+    font-size: 4.6rem;
   }
   .work-intro h2 {
-    font-size: 6.3rem;
+    font-size: 5.3rem;
   }
   .work-card-meta h3 {
     font-size: 1.15rem;
