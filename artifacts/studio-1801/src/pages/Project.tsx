@@ -69,6 +69,103 @@ const projects = [
   },
 ];
 
+function AfterHoursPage() {
+  const products = [
+    { image: projectOne, name: 'Handmade pasta with tomato', price: '$18.00' },
+    { image: projectFive, name: 'Sunday sauce, slow cooked', price: '$16.00' },
+    { image: projectTwo, name: 'Eggplant parmigiana', price: '$23.00' },
+  ];
+
+  return (
+    <main className="after-hours-page" data-testid="page-project-after-hours">
+      <div className="after-hours-topbar">New products arriving in our online store soon</div>
+      <section
+        className="after-hours-hero"
+        style={{ backgroundImage: `linear-gradient(rgba(10, 18, 15, 0.5), rgba(10, 18, 15, 0.62)), url(${projectOne})` }}
+      >
+        <nav className="after-hours-nav" aria-label="After Hours navigation">
+          <a className="after-hours-logo" href={`${import.meta.env.BASE_URL}`}>After Hours</a>
+          <div className="after-hours-nav-links">
+            <a href="#shop">Shop</a>
+            <a href="#story">Our story</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div className="after-hours-nav-actions" aria-label="Quick links">
+            <span aria-hidden="true">⌕</span>
+            <span aria-hidden="true">♡</span>
+            <span aria-hidden="true">□</span>
+          </div>
+        </nav>
+        <div className="after-hours-hero-copy">
+          <span>Handmade, after dark</span>
+          <h1>Pasta fresca a mano.</h1>
+          <p>
+            We create the finest handmade pasta using only the best ingredients
+            our local producers have to offer. Alongside our pasta fresco, we
+            specialise in restaurant quality meals to cook at home.
+          </p>
+        </div>
+      </section>
+
+      <section id="shop" className="after-hours-shop">
+        <span className="after-hours-section-label">The pantry</span>
+        <h2>Shop our best sellers</h2>
+        <p className="after-hours-section-copy">
+          For that special occasion, a spontaneous gathering, or a simple yet
+          nourishing meal at home.
+        </p>
+        <div className="after-hours-products">
+          {products.map((product) => (
+            <article className="after-hours-product" key={product.name}>
+              <div className="after-hours-product-image">
+                <img src={product.image} alt={product.name} />
+              </div>
+              <h3>{product.name}</h3>
+              <p>From {product.price}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="story" className="after-hours-story">
+        <div className="after-hours-story-image">
+          <img src={projectFour} alt="Freshly baked croissants arranged on a tray" />
+        </div>
+        <div className="after-hours-story-copy">
+          <h2>Made slowly.<br />Shared generously.</h2>
+          <p>Simple ingredients, honest work, and a table worth staying around.</p>
+          <a href="#contact">Our story <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section id="contact" className="after-hours-newsletter">
+        <h2>Stay a little longer.</h2>
+        <p>Join our mailing list for new dishes, recipes, and evenings worth remembering.</p>
+        <form className="after-hours-form" onSubmit={(event) => event.preventDefault()}>
+          <input type="email" aria-label="Email address" placeholder="Your email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <footer className="after-hours-footer">
+        <div>
+          <strong>After Hours</strong>
+          <p>Handmade pasta, made for sharing.</p>
+        </div>
+        <div>
+          <span>New York, NY</span>
+          <span>hello@afterhours.com</span>
+        </div>
+        <div className="after-hours-footer-links">
+          <a href="#shop">Shop</a>
+          <a href="#story">Our story</a>
+          <a href={`${import.meta.env.BASE_URL}#work`}>Studio 1801</a>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
 export default function ProjectPage({ params }: RouteComponentProps<{ slug: string }>) {
   const project = projects.find((item) => item.slug === params.slug);
 
@@ -81,6 +178,10 @@ export default function ProjectPage({ params }: RouteComponentProps<{ slug: stri
         </div>
       </main>
     );
+  }
+
+  if (project.slug === 'after-hours') {
+    return <AfterHoursPage />;
   }
 
   return (
