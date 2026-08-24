@@ -76,8 +76,8 @@ const projects = [
 function AfterHoursPage() {
   const products = [
     { image: afterHoursPasta, name: 'Fettuccine al burro', price: '$18.00' },
-    { image: afterHoursPizza, name: 'Margherita, wood fired', price: '$23.00' },
-    { image: afterHoursTable, name: 'Sunday supper for two', price: '$46.00' },
+    { image: projectOne, name: 'Tagliatelle, late night', price: '$18.00' },
+    { image: projectFour, name: 'The after dinner bake', price: '$12.00' },
   ];
 
   return (
@@ -108,6 +108,11 @@ function AfterHoursPage() {
             our local producers have to offer. Alongside our pasta fresco, we
             specialise in restaurant quality meals to cook at home.
           </p>
+          <a className="after-hours-hero-cta" href="#shop">Enter the pantry <span aria-hidden="true">↓</span></a>
+        </div>
+        <div className="after-hours-hero-note" aria-hidden="true">
+          <span>01</span>
+          <span>New York · 2026</span>
         </div>
       </section>
 
@@ -121,11 +126,17 @@ function AfterHoursPage() {
         <div className="after-hours-products">
           {products.map((product) => (
             <article className="after-hours-product" key={product.name}>
+              <span className="after-hours-product-number">
+                {String(products.indexOf(product) + 1).padStart(2, '0')}
+              </span>
               <div className="after-hours-product-image">
                 <img src={product.image} alt={product.name} />
               </div>
               <h3>{product.name}</h3>
-              <p>From {product.price}</p>
+              <div className="after-hours-product-footer">
+                <p>From {product.price}</p>
+                <button type="button" aria-label={`Add ${product.name} to order`}>+</button>
+              </div>
             </article>
           ))}
         </div>
@@ -133,12 +144,16 @@ function AfterHoursPage() {
 
       <section id="story" className="after-hours-story">
         <div className="after-hours-story-image">
-          <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" />
+          <img src={afterHoursTable} alt="A candlelit table set with pasta, bread, and wine" />
+        </div>
+        <div className="after-hours-story-detail">
+          <img src={afterHoursPizza} alt="A pizza served in a pool of sunlight" />
+          <span>From the kitchen, with love.</span>
         </div>
         <div className="after-hours-story-copy">
           <span className="after-hours-section-label">The evening menu</span>
-          <h2>Made slowly.<br />Shared generously.</h2>
-          <p>Simple ingredients, honest work, and a table worth staying around.</p>
+          <h2>For the table,<br />not the feed.</h2>
+          <p>Simple ingredients, honest work, and a table worth staying around. Come hungry, stay late.</p>
           <a href="#contact">Read our story <span aria-hidden="true">↗</span></a>
         </div>
       </section>
