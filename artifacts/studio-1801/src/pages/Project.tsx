@@ -9,7 +9,6 @@ import afterHoursHero from '@assets/image_1787586093620.png';
 import afterHoursPasta from '@assets/image_1787586183033.png';
 import afterHoursPizza from '@assets/image_1787586288541.png';
 import afterHoursTable from '@assets/image_1787586334485.png';
-import afterHoursDessert from '@assets/image_1787589296215.png';
 
 const projects = [
   {
@@ -78,7 +77,7 @@ function AfterHoursPage() {
   const products = [
     { image: afterHoursPasta, name: 'Fettuccine al burro', price: '$18.00' },
     { image: projectOne, name: 'Tagliatelle, late night', price: '$18.00' },
-    { image: afterHoursDessert, name: 'The after dinner bake', price: '$12.00' },
+    { image: projectFour, name: 'The after dinner bake', price: '$12.00' },
   ];
 
   return (
