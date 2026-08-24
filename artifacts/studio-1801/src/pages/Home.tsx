@@ -168,7 +168,7 @@ export default function Home() {
         </div>
 
         <div className="work-grid" data-testid="grid-work-projects">
-          <a className="work-card" href={`${import.meta.env.BASE_URL}work/after-hours`} data-testid="card-project-1">
+          <a className="work-card" href={`${import.meta.env.BASE_URL}preview/after-hours`} data-testid="card-project-1">
               <div className="work-card-image">
               <img src={afterHoursSelectedWork} alt="Ramen served in a dark restaurant setting" data-testid="img-project-1" />
             </div>
@@ -177,7 +177,7 @@ export default function Home() {
               <p data-testid="text-project-1-desc">Restaurant identity <span>·</span> Digital</p>
             </div>
           </a>
-          <a className="work-card" href={`${import.meta.env.BASE_URL}work/common-table`} data-testid="card-project-2">
+          <a className="work-card" href={`${import.meta.env.BASE_URL}preview/common-table`} data-testid="card-project-2">
             <div className="work-card-image">
               <img src={commonTableSelectedWork} alt="Common Table hospitality art direction" data-testid="img-project-2" />
             </div>
@@ -186,7 +186,7 @@ export default function Home() {
               <p data-testid="text-project-2-desc">Hospitality <span>·</span> Art direction</p>
             </div>
           </a>
-          <a className="work-card" href={`${import.meta.env.BASE_URL}work/field-notes`} data-testid="card-project-3">
+          <a className="work-card" href={`${import.meta.env.BASE_URL}preview/field-notes`} data-testid="card-project-3">
             <div className="work-card-image">
               <img src={fieldNotesSelectedWork} alt="Sushi and wine served at a dark restaurant table" data-testid="img-project-3" />
             </div>
@@ -195,7 +195,7 @@ export default function Home() {
               <p data-testid="text-project-3-desc">Food studio <span>·</span> Web experience</p>
             </div>
           </a>
-          <a className="work-card" href={`${import.meta.env.BASE_URL}work/the-flour-room`} data-testid="card-project-4">
+          <a className="work-card" href={`${import.meta.env.BASE_URL}preview/the-flour-room`} data-testid="card-project-4">
             <div className="work-card-image">
               <img src={projectFour} alt="Bakers arranging rows of fresh croissants on a tray" data-testid="img-project-4" />
             </div>
@@ -204,7 +204,7 @@ export default function Home() {
               <p data-testid="text-project-4-desc">Bakery identity <span>·</span> Digital</p>
             </div>
           </a>
-          <a className="work-card" href={`${import.meta.env.BASE_URL}work/market-table`} data-testid="card-project-5">
+          <a className="work-card" href={`${import.meta.env.BASE_URL}preview/market-table`} data-testid="card-project-5">
             <div className="work-card-image">
               <img src={projectFive} alt="A Thai restaurant table filled with colorful shared dishes" data-testid="img-project-5" />
             </div>
@@ -213,7 +213,7 @@ export default function Home() {
               <p data-testid="text-project-5-desc">Restaurant identity <span>·</span> Digital</p>
             </div>
           </a>
-          <a className="work-card" href={`${import.meta.env.BASE_URL}work/first-light`} data-testid="card-project-6">
+          <a className="work-card" href={`${import.meta.env.BASE_URL}preview/first-light`} data-testid="card-project-6">
             <div className="work-card-image">
               <img src={projectSix} alt="Coffee and a pastry on a warm wooden cafe table" data-testid="img-project-6" />
             </div>
