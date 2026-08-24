@@ -7,6 +7,7 @@ import NotFound from '@/pages/not-found';
 import HomePage from '@/pages/Home';
 import ProjectPage from '@/pages/Project';
 import PreviewPage from '@/pages/Preview';
+import OtherWorksPage from '@/pages/OtherWorks';
 import {
   Route,
   Switch,
@@ -21,6 +22,7 @@ function Router() {
     <RoutedErrorBoundary>
       <Switch>
         <Route path="/" component={HomePage} />
+        <Route path="/other-works" component={OtherWorksPage} />
         <Route path="/preview/:slug" component={PreviewPage} />
         <Route path="/work/:slug" component={ProjectPage} />
         <Route component={NotFound} />

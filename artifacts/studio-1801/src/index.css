@@ -653,6 +653,102 @@
   color: var(--gray-light);
   margin: 0;
 }
+.see-other-works {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 72px;
+  padding: 14px 20px;
+  border: 1px solid var(--charcoal);
+  border-radius: 999px;
+  color: var(--charcoal);
+  font-size: 12px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.see-other-works:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+/* OTHER WORKS */
+.other-works-page {
+  min-height: 100dvh;
+  padding: 16px;
+  background: var(--charcoal);
+}
+.other-works-header,
+.other-works-content {
+  background: var(--cream);
+}
+.other-works-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 40px;
+  border-radius: 16px 16px 0 0;
+  font-size: 12px;
+}
+.other-works-header a {
+  color: var(--charcoal);
+  text-decoration: none;
+}
+.other-works-content {
+  min-height: calc(100dvh - 98px);
+  padding: 10vh 12vw 12vh;
+  border-radius: 0 0 16px 16px;
+}
+.other-works-kicker {
+  color: var(--gray-text);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.other-works-content h1 {
+  max-width: 700px;
+  margin: 18px 0 14px;
+  font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(56px, 9vw, 128px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 0.88;
+}
+.other-works-content > p {
+  margin: 0 0 70px;
+  color: var(--gray-text);
+  font-size: 15px;
+}
+.other-works-list {
+  max-width: 980px;
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+}
+.other-work-link {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  color: var(--charcoal);
+  text-decoration: none;
+}
+.other-work-link > span,
+.other-work-link em {
+  color: var(--gray-text);
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.other-work-link strong {
+  font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(22px, 2.5vw, 36px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+.other-work-link:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
 
 /* PROJECT PAGES */
 .portfolio-page {

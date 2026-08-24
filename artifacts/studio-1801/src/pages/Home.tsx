@@ -223,6 +223,9 @@ export default function Home() {
             </div>
           </a>
         </div>
+        <a className="see-other-works" href={`${import.meta.env.BASE_URL}other-works`}>
+          See Other Works <span aria-hidden="true">↗</span>
+        </a>
       </section>
 
       <section id="strategy" className="reference-strategy" data-testid="section-strategy">
