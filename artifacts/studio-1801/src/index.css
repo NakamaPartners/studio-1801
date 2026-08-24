@@ -1568,4 +1568,42 @@
     align-items: flex-start;
     gap: 24px;
   }
+
+  /* Project pages Mobile */
+  .portfolio-page {
+    padding: 8px;
+  }
+  .portfolio-frame {
+    min-height: calc(100vh - 16px);
+    padding: 24px;
+  }
+  .portfolio-nav {
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+  }
+  .portfolio-nav > span {
+    display: none;
+  }
+  .portfolio-intro {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 72px 0 40px;
+  }
+  .portfolio-intro h1 {
+    font-size: 4rem;
+  }
+  .portfolio-intro > p {
+    font-size: 1rem;
+  }
+  .portfolio-image {
+    aspect-ratio: 1.15;
+  }
+  .portfolio-details {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 32px;
+  }
+  .portfolio-contact {
+    justify-self: start;
+  }
 }
