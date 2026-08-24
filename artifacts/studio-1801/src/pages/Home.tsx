@@ -186,7 +186,7 @@ export default function Home() {
             </div>
           </a>
           <a className="work-card" href={`${import.meta.env.BASE_URL}work/field-notes`} data-testid="card-project-3">
-            <div className="work-card-image field-notes-card-image">
+            <div className="work-card-image">
               <img src={fieldNotesSelectedWork} alt="Sushi and wine served at a dark restaurant table" data-testid="img-project-3" />
             </div>
             <div className="work-card-meta">
