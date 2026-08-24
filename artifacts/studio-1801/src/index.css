@@ -1068,10 +1068,10 @@
 }
 .contact-info {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 4vw;
   width: 100%;
-  max-width: 760px;
+  max-width: 1008px;
 }
 .contact-label {
   display: block;
@@ -1228,18 +1228,18 @@
     max-width: 18rem;
   }
   .contact-editorial h2 {
-    font-size: 5.25rem;
+    font-size: 4.25rem;
   }
   .contact-label {
-    font-size: 0.69rem;
+    font-size: 0.75rem;
     margin-bottom: 0.75rem;
   }
   .contact-info-item p,
   .contact-email {
-    font-size: 0.875rem;
+    font-size: 1.05rem;
   }
   .contact-info {
-    max-width: 47.5rem;
+    max-width: 63rem;
   }
   .contact-signoff {
     font-size: 2.7rem;

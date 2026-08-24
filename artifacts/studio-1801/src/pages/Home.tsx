@@ -456,6 +456,18 @@ export default function Home() {
                 rooms this fall.
               </p>
             </div>
+            <div className="contact-info-item">
+              <span className="contact-label">Instagram</span>
+              <a
+                href="https://www.instagram.com/studio____1801/"
+                className="contact-email"
+                target="_blank"
+                rel="noreferrer"
+                data-testid="link-contact-instagram"
+              >
+                Studio____1801 <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
 
