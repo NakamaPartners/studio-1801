@@ -5,6 +5,10 @@ import projectThree from '@assets/Unknown2_1787438547314.png';
 import projectFour from '@assets/image_1787495321878.png';
 import projectFive from '@assets/image_1787495413455.png';
 import projectSix from '@assets/image_1787495063895.png';
+import afterHoursHero from '@assets/image_1787586093620.png';
+import afterHoursPasta from '@assets/image_1787586183033.png';
+import afterHoursPizza from '@assets/image_1787586288541.png';
+import afterHoursTable from '@assets/image_1787586334485.png';
 
 const projects = [
   {
@@ -71,9 +75,9 @@ const projects = [
 
 function AfterHoursPage() {
   const products = [
-    { image: projectOne, name: 'Handmade pasta with tomato', price: '$18.00' },
-    { image: projectFive, name: 'Sunday sauce, slow cooked', price: '$16.00' },
-    { image: projectTwo, name: 'Eggplant parmigiana', price: '$23.00' },
+    { image: afterHoursPasta, name: 'Fettuccine al burro', price: '$18.00' },
+    { image: afterHoursPizza, name: 'Margherita, wood fired', price: '$23.00' },
+    { image: afterHoursTable, name: 'Sunday supper for two', price: '$46.00' },
   ];
 
   return (
@@ -81,7 +85,7 @@ function AfterHoursPage() {
       <div className="after-hours-topbar">New products arriving in our online store soon</div>
       <section
         className="after-hours-hero"
-        style={{ backgroundImage: `linear-gradient(rgba(10, 18, 15, 0.5), rgba(10, 18, 15, 0.62)), url(${projectOne})` }}
+        style={{ backgroundImage: `linear-gradient(rgba(10, 18, 15, 0.38), rgba(10, 18, 15, 0.7)), url(${afterHoursHero})` }}
       >
         <nav className="after-hours-nav" aria-label="After Hours navigation">
           <a className="after-hours-logo" href={`${import.meta.env.BASE_URL}`}>After Hours</a>
@@ -129,12 +133,13 @@ function AfterHoursPage() {
 
       <section id="story" className="after-hours-story">
         <div className="after-hours-story-image">
-          <img src={projectFour} alt="Freshly baked croissants arranged on a tray" />
+          <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" />
         </div>
         <div className="after-hours-story-copy">
+          <span className="after-hours-section-label">The evening menu</span>
           <h2>Made slowly.<br />Shared generously.</h2>
           <p>Simple ingredients, honest work, and a table worth staying around.</p>
-          <a href="#contact">Our story <span aria-hidden="true">↗</span></a>
+          <a href="#contact">Read our story <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
