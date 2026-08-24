@@ -6,6 +6,7 @@ import projectThree from '@assets/Unknown2_1787438547314.png';
 import projectFour from '@assets/image_1787495321878.png';
 import projectFive from '@assets/image_1787495413455.png';
 import projectSix from '@assets/image_1787495063895.png';
+import afterHoursSelectedWork from '@assets/image_1787590125025.png';
 import serviceDesign from '@assets/image_1787440461289.png';
 import serviceDevelopment from '@assets/image_1787441232956.png';
 import serviceIntegration from '@assets/image_1787440676159.png';
@@ -169,7 +170,7 @@ export default function Home() {
         <div className="work-grid" data-testid="grid-work-projects">
           <a className="work-card" href={`${import.meta.env.BASE_URL}work/after-hours`} data-testid="card-project-1">
               <div className="work-card-image">
-              <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" data-testid="img-project-1" />
+              <img src={afterHoursSelectedWork} alt="Ramen served in a dark restaurant setting" data-testid="img-project-1" />
             </div>
             <div className="work-card-meta">
               <h3 data-testid="text-project-1-title">After Hours</h3>
