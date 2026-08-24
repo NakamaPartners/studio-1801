@@ -8,6 +8,9 @@ const otherWorks = [
   { name: '4estea', url: 'https://4estea-4estea-home.vercel.app' },
   { name: 'Pho Sister', url: 'https://pho-sister-pho-sister.vercel.app' },
   { name: 'Mon Petit Choux', url: 'https://mon-petit-choux-api-server.vercel.app' },
+  { name: 'Thai Pearl', url: 'https://thai-pearl-kappa.vercel.app' },
+  { name: 'Teatery Tea & Tapioca', url: 'https://teatery-tea-tapioca.vercel.app' },
+  { name: 'Yokai Musubi', url: 'https://yokai-musubi-api-server.vercel.app' },
 ];
 
 export default function OtherWorksPage() {
