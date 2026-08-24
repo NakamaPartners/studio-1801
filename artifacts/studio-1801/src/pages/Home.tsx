@@ -165,7 +165,7 @@ export default function Home() {
         </div>
 
         <div className="work-grid" data-testid="grid-work-projects">
-          <article className="work-card" data-testid="card-project-1">
+          <a className="work-card" href={`${import.meta.env.BASE_URL}work/after-hours`} data-testid="card-project-1">
             <div className="work-card-image">
               <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" data-testid="img-project-1" />
             </div>
@@ -173,8 +173,8 @@ export default function Home() {
               <h3 data-testid="text-project-1-title">After Hours</h3>
               <p data-testid="text-project-1-desc">Restaurant identity <span>·</span> Digital</p>
             </div>
-          </article>
-          <article className="work-card" data-testid="card-project-2">
+          </a>
+          <a className="work-card" href={`${import.meta.env.BASE_URL}work/common-table`} data-testid="card-project-2">
             <div className="work-card-image">
               <img src={projectTwo} alt="People sharing dim sum at a restaurant table" data-testid="img-project-2" />
             </div>
@@ -182,8 +182,8 @@ export default function Home() {
               <h3 data-testid="text-project-2-title">Common Table</h3>
               <p data-testid="text-project-2-desc">Hospitality <span>·</span> Art direction</p>
             </div>
-          </article>
-          <article className="work-card" data-testid="card-project-3">
+          </a>
+          <a className="work-card" href={`${import.meta.env.BASE_URL}work/field-notes`} data-testid="card-project-3">
             <div className="work-card-image">
               <img src={projectThree} alt="A Japanese-inspired meal served on a tray" data-testid="img-project-3" />
             </div>
@@ -191,8 +191,8 @@ export default function Home() {
               <h3 data-testid="text-project-3-title">Field Notes</h3>
               <p data-testid="text-project-3-desc">Food studio <span>·</span> Web experience</p>
             </div>
-          </article>
-          <article className="work-card" data-testid="card-project-4">
+          </a>
+          <a className="work-card" href={`${import.meta.env.BASE_URL}work/the-flour-room`} data-testid="card-project-4">
             <div className="work-card-image">
               <img src={projectFour} alt="Bakers arranging rows of fresh croissants on a tray" data-testid="img-project-4" />
             </div>
@@ -200,8 +200,8 @@ export default function Home() {
               <h3 data-testid="text-project-4-title">The Flour Room</h3>
               <p data-testid="text-project-4-desc">Bakery identity <span>·</span> Digital</p>
             </div>
-          </article>
-          <article className="work-card" data-testid="card-project-5">
+          </a>
+          <a className="work-card" href={`${import.meta.env.BASE_URL}work/market-table`} data-testid="card-project-5">
             <div className="work-card-image">
               <img src={projectFive} alt="A Thai restaurant table filled with colorful shared dishes" data-testid="img-project-5" />
             </div>
@@ -209,8 +209,8 @@ export default function Home() {
               <h3 data-testid="text-project-5-title">Market Table</h3>
               <p data-testid="text-project-5-desc">Restaurant identity <span>·</span> Digital</p>
             </div>
-          </article>
-          <article className="work-card" data-testid="card-project-6">
+          </a>
+          <a className="work-card" href={`${import.meta.env.BASE_URL}work/first-light`} data-testid="card-project-6">
             <div className="work-card-image">
               <img src={projectSix} alt="Coffee and a pastry on a warm wooden cafe table" data-testid="img-project-6" />
             </div>
@@ -218,7 +218,7 @@ export default function Home() {
               <h3 data-testid="text-project-6-title">First Light</h3>
               <p data-testid="text-project-6-desc">Café identity <span>·</span> Digital</p>
             </div>
-          </article>
+          </a>
         </div>
       </section>
 
