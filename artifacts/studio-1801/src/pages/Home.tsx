@@ -18,7 +18,7 @@ import processFive from '@assets/image_1787442378754.png';
 import processSix from '@assets/image_1787442428529.png';
 import strategyRoom from '@assets/image_1787508416188.png';
 import strategyStreet from '@assets/image_1787508483431.png';
-import commonTableSelectedWork from '@assets/image_1787589344629.png';
+import commonTableSelectedWork from '@assets/image_1787589611989.png';
 import fieldNotesSelectedWork from '@assets/image_1787589483124.png';
 
 const serviceOptions = [
