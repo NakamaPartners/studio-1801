@@ -19,7 +19,7 @@ const previewSites: Record<string, { title: string; url: string }> = {
   },
   'market-table': {
     title: 'Market Table',
-    url: 'https://suea-augusta-e0bngrt43-contact-18884617s-projects.vercel.app',
+    url: 'https://suea-augusta.vercel.app',
   },
   'first-light': {
     title: 'First Light',
