@@ -825,6 +825,14 @@
   padding: 220px 24px 110px;
   text-align: center;
 }
+.after-hours-hero-copy::before {
+  content: "✳";
+  position: absolute;
+  margin-top: -90px;
+  color: #dca27c;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+}
 .after-hours-hero-copy > span,
 .after-hours-section-label {
   font-family: "Instrument Sans", Arial, sans-serif;
@@ -843,6 +851,31 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.55;
+}
+.after-hours-hero-cta {
+  display: inline-flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 34px;
+  padding: 13px 20px;
+  border: 1px solid rgba(245, 238, 229, 0.65);
+  border-radius: 999px;
+  color: #f5eee5;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.after-hours-hero-note {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vw 22px;
+  color: rgba(245, 238, 229, 0.72);
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 .after-hours-shop {
   position: relative;
@@ -882,6 +915,24 @@
   border-radius: 7px;
   background: #e7ddd2;
 }
+.after-hours-product {
+  position: relative;
+}
+.after-hours-product-number {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  left: 14px;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  background: #f5eee5;
+  color: #35463f;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 10px;
+}
 .after-hours-product-image img {
   width: 100%;
   height: 100%;
@@ -908,9 +959,26 @@
   font-family: "Instrument Sans", Arial, sans-serif;
   font-size: 10px;
 }
+.after-hours-product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.after-hours-product-footer button {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 1px solid rgba(245, 238, 229, 0.55);
+  border-radius: 50%;
+  background: transparent;
+  color: #f5eee5;
+  font-size: 16px;
+  line-height: 1;
+}
 .after-hours-story {
   display: grid;
-  grid-template-columns: 1.45fr 0.55fr;
+  grid-template-columns: 1.2fr 0.48fr 0.72fr;
   gap: 7vw;
   align-items: center;
   padding: 120px 8vw;
@@ -921,6 +989,25 @@
   overflow: hidden;
   aspect-ratio: 1.85;
   border-radius: 7px;
+}
+.after-hours-story-detail {
+  align-self: end;
+  margin-bottom: -72px;
+}
+.after-hours-story-detail img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.78;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.after-hours-story-detail span {
+  display: block;
+  margin-top: 12px;
+  font-family: "Instrument Sans", Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 .after-hours-story-image img {
   width: 100%;
@@ -1878,6 +1965,9 @@
   .after-hours-hero-copy {
     padding: 150px 24px 70px;
   }
+  .after-hours-hero-copy::before {
+    margin-top: -72px;
+  }
   .after-hours-hero-copy h1 {
     font-size: 2.75rem;
   }
@@ -1897,6 +1987,10 @@
   .after-hours-product:nth-child(2),
   .after-hours-product:nth-child(3) {
     margin-top: 0;
+  }
+  .after-hours-story-detail {
+    width: 58%;
+    margin: -20px 0 0 auto;
   }
   .after-hours-story {
     grid-template-columns: 1fr;
