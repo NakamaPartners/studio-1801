@@ -1,1 +1,2 @@
 - [Studio 1801 style rules](studio-1801-style-rules.md) — house rules (sentence case, 14px rounded images, editorial layout) override details in user reference screenshots.
+- [Vercel SPA routing](vercel-spa-routing.md) — client-side routes need a root rewrite to index.html when hosted on Vercel.
