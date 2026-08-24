@@ -18,8 +18,8 @@ import processFive from '@assets/image_1787442378754.png';
 import processSix from '@assets/image_1787442428529.png';
 import strategyRoom from '@assets/image_1787508416188.png';
 import strategyStreet from '@assets/image_1787508483431.png';
-import commonTableSelectedWork from '@assets/image_1787589611989.png';
-import fieldNotesSelectedWork from '@assets/image_1787589483124.png';
+import commonTableSelectedWork from '@assets/image_1787589715542.png';
+import fieldNotesSelectedWork from '@assets/image_1787589680522.png';
 
 const serviceOptions = [
   {
@@ -168,7 +168,7 @@ export default function Home() {
 
         <div className="work-grid" data-testid="grid-work-projects">
           <a className="work-card" href={`${import.meta.env.BASE_URL}work/after-hours`} data-testid="card-project-1">
-            <div className="work-card-image">
+              <div className="work-card-image">
               <img src={projectOne} alt="A plated pasta dish in a dark restaurant setting" data-testid="img-project-1" />
             </div>
             <div className="work-card-meta">
@@ -186,7 +186,7 @@ export default function Home() {
             </div>
           </a>
           <a className="work-card" href={`${import.meta.env.BASE_URL}work/field-notes`} data-testid="card-project-3">
-            <div className="work-card-image">
+            <div className="work-card-image field-notes-card-image">
               <img src={fieldNotesSelectedWork} alt="Sushi and wine served at a dark restaurant table" data-testid="img-project-3" />
             </div>
             <div className="work-card-meta">
