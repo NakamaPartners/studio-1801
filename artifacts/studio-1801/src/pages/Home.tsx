@@ -22,6 +22,19 @@ import strategyStreet from '@assets/image_1787508483431.png';
 import commonTableSelectedWork from '@assets/image_1787589715542.png';
 import fieldNotesSelectedWork from '@assets/image_1787589680522.png';
 
+const freeOfferFormUrl = 'https://docs.google.com/forms/d/1LIemhhTpNWY5vYamUZItCsHsG6jIuRgtHJfoDMbWYz8/viewform?pli=1&pli=1&edit_requested=true';
+const contactDraftUrl = `mailto:hello@1801.studio?subject=${encodeURIComponent('Let’s talk about your restaurant website')}&body=${encodeURIComponent(`Hi Studio 1801,
+
+I’d like to talk about a website project for my restaurant.
+
+Restaurant name:
+Current website:
+What I’d like help with:
+Ideal timeline:
+
+Thank you,
+`)}`;
+
 const serviceOptions = [
   {
     label: 'Website Design',
@@ -97,10 +110,10 @@ export default function Home() {
               <li className="hero-check-emphasis">Keep it. No risk.</li>
             </ul>
             <div className="hero-actions">
-              <a className="hero-cta" href="mailto:hello@studio1801.com?subject=Claim%20my%20Free%20Offer" data-testid="button-claim-offer">
+              <a className="hero-cta" href={freeOfferFormUrl} target="_blank" rel="noreferrer" data-testid="button-claim-offer">
                 Claim your Free Offer <span aria-hidden="true">→</span>
               </a>
-              <a className="hero-secondary-cta" href="mailto:hello@studio1801.com?subject=Contact%20Studio%201801" data-testid="button-contact">
+              <a className="hero-secondary-cta" href={contactDraftUrl} data-testid="button-contact">
                 Contact us <span aria-hidden="true">↗</span>
               </a>
             </div>
