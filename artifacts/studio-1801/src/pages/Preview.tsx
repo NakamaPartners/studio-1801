@@ -4,7 +4,7 @@ import type { RouteComponentProps } from 'wouter';
 const previewSites: Record<string, { title: string; url: string }> = {
   'after-hours': {
     title: 'After Hours',
-    url: `${import.meta.env.BASE_URL}work/after-hours`,
+    url: 'https://ichizu-ramen-api-server.vercel.app',
   },
   'common-table': {
     title: 'Common Table',
