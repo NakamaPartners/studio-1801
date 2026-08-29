@@ -2462,6 +2462,7 @@
     font-size: clamp(2.75rem, 12vw, 4.25rem);
     line-height: 0.93;
     margin-bottom: 22px;
+    font-weight: 600;
     text-align: center;
   }
 
