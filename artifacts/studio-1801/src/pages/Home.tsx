@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Instagram, Mail, MessageCircle, MessageSquare } from 'lucide-react';
 import heroLead from '@assets/Image_7_1787435406771.jpeg';
 import projectOne from '@assets/Unknown_1787504780455.png';
 import projectTwo from '@assets/Unknown1_1787438547314.png';
@@ -23,14 +24,13 @@ import commonTableSelectedWork from '@assets/image_1787589715542.png';
 import fieldNotesSelectedWork from '@assets/image_1787589680522.png';
 
 const freeOfferFormUrl = 'https://docs.google.com/forms/d/1LIemhhTpNWY5vYamUZItCsHsG6jIuRgtHJfoDMbWYz8/viewform?pli=1&pli=1&edit_requested=true';
-const contactDraftUrl = `mailto:hello@1801.studio?subject=${encodeURIComponent('Let’s talk about your restaurant website')}&body=${encodeURIComponent(`Hi Studio 1801,
+const contactDraftUrl = `mailto:hello@1801.studio?subject=${encodeURIComponent('Claim my FREE Website - [Restaurant Name]')}&body=${encodeURIComponent(`Hi Studio 1801,
 
-I’d like to talk about a website project for my restaurant.
+I’d like to claim my FREE website for my restaurant.
 
 Restaurant name:
 Current website:
 What I’d like help with:
-Ideal timeline:
 
 Thank you,
 `)}`;
@@ -68,6 +68,28 @@ const serviceOptions = [
 
 export default function Home() {
   const [activeService, setActiveService] = useState(0);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isContactOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsContactOpen(false);
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isContactOpen]);
 
   return (
     <main className="reference-page" data-testid="page-home">
@@ -79,7 +101,7 @@ export default function Home() {
             <a href="#services" data-testid="link-nav-services">Services</a>
             <a href="#process" data-testid="link-nav-process">Process</a>
           </div>
-          <a className="reference-project-link" href="mailto:hello@studio1801.com" data-testid="link-nav-contact">
+          <a className="reference-project-link" href="mailto:hello@1801.studio" data-testid="link-nav-contact">
             Start a Project <span aria-hidden="true">→</span>
           </a>
         </nav>
@@ -113,11 +135,11 @@ export default function Home() {
               <a className="hero-cta" href={freeOfferFormUrl} target="_blank" rel="noreferrer" data-testid="button-claim-offer">
                 Claim your Free Offer <span aria-hidden="true">→</span>
               </a>
-              <a className="hero-secondary-cta" href={contactDraftUrl} data-testid="button-contact">
+              <button className="hero-secondary-cta" type="button" onClick={() => setIsContactOpen(true)} data-testid="button-contact">
                 Contact us <span aria-hidden="true">↗</span>
-              </a>
+              </button>
             </div>
-            <a className="hero-work-link" href="mailto:hello@studio1801.com?subject=Claim%20my%20Free%20Personalized%20Review" data-testid="link-hero-work">
+            <a className="hero-work-link" href="mailto:hello@1801.studio?subject=Claim%20my%20Free%20Personalized%20Review" data-testid="link-hero-work">
               <span aria-hidden="true">•</span> Build your website before you spend a dollar
             </a>
           </section>
@@ -140,7 +162,7 @@ export default function Home() {
 
         <footer className="reference-footer" data-testid="footer-hero">
           <div className="reference-locations">
-            <span data-testid="text-footer-location-1">Based in New York</span>
+            <span data-testid="text-footer-location-1">Based in Philadelphia, PA</span>
             <span data-testid="text-footer-location-2">Working everywhere</span>
           </div>
           <strong data-testid="text-footer-brand">Studio 1801</strong>
@@ -161,7 +183,7 @@ export default function Home() {
           <br className="about-desktop-break" />
           businesses forward.
         </p>
-        <a className="about-cta" href="mailto:hello@studio1801.com" data-testid="link-about-chat">
+        <a className="about-cta" href="mailto:hello@1801.studio" data-testid="link-about-chat">
           <span aria-hidden="true">•</span>
           Let&apos;s chat
         </a>
@@ -441,7 +463,7 @@ export default function Home() {
       <section id="contact" className="reference-contact" data-testid="section-contact">
         <div className="contact-meta" aria-hidden="true" data-testid="contact-meta">
           <span>Studio 1801</span>
-          <span>New York / Worldwide</span>
+          <span>Philadelphia, PA / Worldwide</span>
           <span>07</span>
           <span>Contact</span>
         </div>
@@ -457,14 +479,14 @@ export default function Home() {
           <div className="contact-info" data-testid="contact-info">
             <div className="contact-info-item">
               <span className="contact-label">Email</span>
-              <a href="mailto:hello@studio1801.com" className="contact-email" data-testid="link-contact-email">
-                hello@studio1801.com <span aria-hidden="true">→</span>
+              <a href="mailto:hello@1801.studio" className="contact-email" data-testid="link-contact-email">
+                hello@1801.studio <span aria-hidden="true">→</span>
               </a>
             </div>
             <div className="contact-info-item">
               <span className="contact-label">Studio</span>
               <p>
-                New York,<br />
+                Philadelphia, PA,<br />
                 working everywhere.
               </p>
             </div>
@@ -492,7 +514,7 @@ export default function Home() {
 
         <div className="contact-footer" data-testid="footer-contact">
           <div className="contact-locations" data-testid="contact-locations">
-            <span>Based in New York</span>
+            <span>Based in Philadelphia, PA</span>
             <span>Working everywhere</span>
           </div>
           <div className="contact-signoff" data-testid="text-contact-signoff">
@@ -500,6 +522,84 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {isContactOpen && (
+        <div
+          className="contact-modal-backdrop"
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) {
+              setIsContactOpen(false);
+            }
+          }}
+        >
+          <div className="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+            <div className="contact-modal-header">
+              <h2 id="contact-modal-title">Choose how to reach us</h2>
+              <button
+                className="contact-modal-close"
+                type="button"
+                aria-label="Close contact options"
+                onClick={() => setIsContactOpen(false)}
+              >
+                ×
+              </button>
+            </div>
+            <div className="contact-modal-options">
+              <a
+                className="contact-modal-option"
+                href="https://www.instagram.com/studio____1801/"
+                target="_blank"
+                rel="noreferrer"
+                data-testid="contact-option-instagram"
+              >
+                <span className="contact-modal-option-main">
+                  <Instagram className="contact-modal-icon" aria-hidden="true" strokeWidth={1.6} />
+                  <span>
+                  <strong>Instagram</strong>
+                  <small>@Studio____1801</small>
+                  </span>
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a className="contact-modal-option" href="sms:+15102299053" data-testid="contact-option-imessage">
+                <span className="contact-modal-option-main">
+                  <MessageSquare className="contact-modal-icon" aria-hidden="true" strokeWidth={1.6} />
+                  <span>
+                  <strong>iMessage</strong>
+                  </span>
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                className="contact-modal-option"
+                href="https://wa.me/6285110808158"
+                target="_blank"
+                rel="noreferrer"
+                data-testid="contact-option-whatsapp"
+              >
+                <span className="contact-modal-option-main">
+                  <MessageCircle className="contact-modal-icon" aria-hidden="true" strokeWidth={1.6} />
+                  <span>
+                  <strong>WhatsApp</strong>
+                  </span>
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a className="contact-modal-option" href={contactDraftUrl} data-testid="contact-option-email">
+                <span className="contact-modal-option-main">
+                  <Mail className="contact-modal-icon" aria-hidden="true" strokeWidth={1.6} />
+                  <span>
+                  <strong>Email</strong>
+                  <small>hello@1801.studio</small>
+                  </span>
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

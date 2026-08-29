@@ -203,6 +203,103 @@
   border-color: var(--charcoal);
   color: var(--charcoal);
 }
+.hero-secondary-cta {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.contact-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgba(22, 22, 22, 0.58);
+  backdrop-filter: blur(5px);
+}
+.contact-modal {
+  width: min(100%, 28rem);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: var(--cream);
+  color: var(--charcoal);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+.contact-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.contact-modal-header h2 {
+  margin: 0;
+  font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.contact-modal-close {
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: none;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--charcoal);
+  font: inherit;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.contact-modal-close:hover {
+  border-color: var(--charcoal);
+}
+.contact-modal-options {
+  display: grid;
+}
+.contact-modal-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  color: inherit;
+  text-decoration: none;
+}
+.contact-modal-option-main {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 0.8rem;
+}
+.contact-modal-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: none;
+}
+.contact-modal-option:hover {
+  opacity: 0.6;
+}
+.contact-modal-option strong,
+.contact-modal-option small {
+  display: block;
+}
+.contact-modal-option strong {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.contact-modal-option small {
+  margin-top: 0.2rem;
+  color: var(--gray-text);
+  font-size: 0.75rem;
+}
 
 .hero-work-link {
   display: inline-block;
