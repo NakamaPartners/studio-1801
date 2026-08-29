@@ -234,7 +234,7 @@ export default function ProjectPage({ params }: RouteComponentProps<{ slug: stri
             <span className="portfolio-label">Focus</span>
             <p>{project.category}</p>
           </div>
-          <a className="portfolio-contact" href="mailto:hello@studio1801.com?subject=Start%20a%20project">
+          <a className="portfolio-contact" href="mailto:hello@1801.studio?subject=Start%20a%20project">
             Start a project <span aria-hidden="true">↗</span>
           </a>
         </div>

@@ -24,7 +24,7 @@ import commonTableSelectedWork from '@assets/image_1787589715542.png';
 import fieldNotesSelectedWork from '@assets/image_1787589680522.png';
 
 const freeOfferFormUrl = 'https://docs.google.com/forms/d/1LIemhhTpNWY5vYamUZItCsHsG6jIuRgtHJfoDMbWYz8/viewform?pli=1&pli=1&edit_requested=true';
-const contactDraftUrl = `mailto:hello@1801.studio?subject=${encodeURIComponent('Claim my FREE Website - [Restaurant Name]')}&body=${encodeURIComponent(`Hi Studio 1801,
+const contactDraftUrl = `mailto:hello@1801.studio?subject=${encodeURIComponent('FREE website design and mockup')}&body=${encodeURIComponent(`Hi Studio 1801,
 
 I’d like to claim my FREE website for my restaurant.
 
@@ -174,13 +174,13 @@ export default function Home() {
         <span className="about-label" data-testid="text-about-label">( Studio 1801 ® )</span>
         <p className="about-statement" data-testid="text-about-statement">
           Studio 1801 ®, a design studio
-          <br className="about-desktop-break" />
+          <br className="about-desktop-break" />{' '}
           working at the intersection of brand,
-          <br className="about-desktop-break" />
+          <br className="about-desktop-break" />{' '}
           product, and technology. Designing
-          <br className="about-desktop-break" />
+          <br className="about-desktop-break" />{' '}
           brands and digital products that move
-          <br className="about-desktop-break" />
+          <br className="about-desktop-break" />{' '}
           businesses forward.
         </p>
         <a className="about-cta" href="mailto:hello@1801.studio" data-testid="link-about-chat">
